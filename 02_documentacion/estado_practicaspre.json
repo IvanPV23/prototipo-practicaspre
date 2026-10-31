@@ -1,0 +1,23 @@
+{
+  "hash_alcance": "45cad2dc5277f49ae2bfd3739323514e265ccc5fee125edf44b11ca5b6dd7173",
+  "fases": {
+    "1": {
+      "estado": "completada",
+      "verificada": true,
+      "fecha": "2026-10-31",
+      "intentos": 1
+    },
+    "2": {
+      "estado": "completada",
+      "verificada": true,
+      "fecha": "2026-10-31",
+      "intentos": 1
+    },
+    "3": {
+      "estado": "completada",
+      "verificada": true,
+      "fecha": "2026-10-31",
+      "intentos": 1
+    }
+  }
+}

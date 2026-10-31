@@ -1,0 +1,161 @@
+{
+  "version": 1,
+  "generado": "2026-10-31T07:44:42-05:00",
+  "decision": "A",
+  "justificacion_resumen": "No existen extractos adicionales del CCO de SJM en el PNDA (una sola versión, corte 2026-06-10), y ningún distrito de Lima publica incidencias georreferenciadas a nivel de punto; el único candidato con puntos y series largas (Callao) es de otra provincia, inestable y no claramente superior. Se usa el mismo extracto en su CSV oficial (sin la corrupción de ID del Excel), con límite INEI, SIDPOL y población como contexto; los criterios 4 y 6 quedan como limitaciones documentadas.",
+  "requiere_confirmacion_usuario": false,
+  "distrito": {
+    "nombre": "San Juan de Miraflores",
+    "ubigeo_inei": "150133",
+    "ubigeo_fuente": "150141"
+  },
+  "dataset_principal": {
+    "ruta": "02_documentacion/01_recoleccion/datos/procesados/incidencias_canonico.csv",
+    "registros": 2592,
+    "fecha_min": "2026-05-16",
+    "fecha_max": "2026-06-10",
+    "dias_cubiertos": 26,
+    "pct_georreferenciado": 100.0,
+    "pct_dentro_distrito": 98.77,
+    "sha256": "eea9ec568e26eea03e13b4196de1eb6905a87e72659c52100ce63e733e9dbacd"
+  },
+  "alternativa": {
+    "descripcion": "No aplica: decisión A (se mantiene el distrito del alcance).",
+    "ruta": null
+  },
+  "fuentes": [
+    {
+      "id": "cco_mdsjm_2026",
+      "nombre": "Relación de incidencias atendidas por el Centro de Control de Operaciones (CCO) - Municipalidad Distrital de San Juan de Miraflores (v1.0, corte 2026-06-10)",
+      "institucion": "Municipalidad Distrital de San Juan de Miraflores – Gerencia de Seguridad Ciudadana",
+      "url": "https://www.datosabiertos.gob.pe/dataset/relaci%C3%B3n-de-incidencias-atendidas-por-el-centro-de-control-de-operaciones-cco-municipalidad",
+      "licencia": "Open Data Commons Attribution License (ODC-By 1.0)",
+      "fecha_descarga": "2026-10-31",
+      "ruta_raw": "02_documentacion/01_recoleccion/datos/raw/cco_mdsjm_2026/2026-10-31/incidencias_seguridad_sjm_20260610.csv",
+      "sha256": "dcfcea3586ab5911a4216d9d7348b87711cc399a9d18125655880c7e4a38e7a1",
+      "registros": 2592,
+      "uso": "entrenamiento"
+    },
+    {
+      "id": "sidpol_mininter",
+      "nombre": "Denuncias policiales registradas a nivel nacional (SIDPOL), enero 2018 a septiembre 2026",
+      "institucion": "Ministerio del Interior (MININTER)",
+      "url": "https://www.datosabiertos.gob.pe/dataset/denuncias-policiales-registradas-nivel-nacional-mininter",
+      "licencia": "Open Data Commons Attribution License (ODC-By)",
+      "fecha_descarga": "2026-10-31",
+      "ruta_raw": "02_documentacion/01_recoleccion/datos/raw/sidpol_mininter/2026-10-31/DATASET_Denuncias_Policiales_Enero_2018_a_Septiembre_2026.csv",
+      "sha256": "e67a1edcd84483df5c471f0d6b9e13c2eeaa34c680af30eb1ec86c443d02ec76",
+      "registros": 376715,
+      "uso": "contexto"
+    },
+    {
+      "id": "limite_inei_ana",
+      "nombre": "Límite distrital de San Juan de Miraflores (ubigeo 150133), capa de distritos censales INEI",
+      "institucion": "INEI (fuente de la geometría); servido por la Autoridad Nacional del Agua (ANA), geosnirh.ana.gob.pe",
+      "url": "https://geosnirh.ana.gob.pe/server/rest/services/Hosted/distritos/FeatureServer/0/query?where=ubigeo%3D%27150133%27&outFields=*&outSR=4326&f=geojson",
+      "licencia": "Información pública del Estado peruano (sin licencia explícita en el servicio; se cita INEI y ANA)",
+      "fecha_descarga": "2026-10-31",
+      "ruta_raw": "02_documentacion/01_recoleccion/datos/raw/limite_inei_ana/2026-10-31/limite_150133_sjm.geojson",
+      "sha256": "2207c664029fbd192598406894f87db39fba216746e50c703e1c3b0cb7e52347",
+      "registros": 1,
+      "uso": "cartografia"
+    },
+    {
+      "id": "poblacion_inei_2026",
+      "nombre": "Perú: Población total proyectada al 30 de junio de cada año, según departamento, provincia y distrito, 2018-2026",
+      "institucion": "Instituto Nacional de Estadística e Informática (INEI)",
+      "url": "https://www.gob.pe/institucion/inei/informes-publicaciones/6894980-peru-poblacion-total-proyectada-al-30-de-junio-de-cada-ano-segun-departamento-provincia-y-distrito-2018-2026",
+      "licencia": "Información pública del Estado peruano (gob.pe; uso con cita de la fuente)",
+      "fecha_descarga": "2026-10-31",
+      "ruta_raw": "02_documentacion/01_recoleccion/datos/raw/poblacion_inei_2026/2026-10-31/poblacion_proyectada_distrital_2018_2026.xlsx",
+      "sha256": "9436df29b883fd4a9db3705040a6668ff4efe7047c2643249b6b6bedd90d5c8b",
+      "registros": 1892,
+      "uso": "exposicion"
+    }
+  ],
+  "contexto": {
+    "sidpol": {
+      "ruta": "02_documentacion/01_recoleccion/datos/procesados/sidpol_sjm_mensual.csv",
+      "periodo": "2018-01 a 2026-09"
+    },
+    "limite_distrital": {
+      "ruta": "02_documentacion/01_recoleccion/datos/cartografia/limite_distrito.geojson",
+      "fuente": "INEI – límites distritales censales (ubigeo 150133), servido por ANA (geosnirh.ana.gob.pe, capa Hosted/distritos)"
+    },
+    "poblacion": {
+      "ruta": "02_documentacion/01_recoleccion/datos/procesados/poblacion_sjm.csv",
+      "fuente": "INEI – Población total proyectada al 30 de junio, 2018-2026 (SJM 2026: 437 390 hab.)"
+    }
+  },
+  "criterios_viabilidad": [
+    {
+      "criterio": "1. Georreferenciación a nivel de punto (lat/lon válidas)",
+      "umbral": ">= 90 % (deseable >= 98 %)",
+      "valor": "100.0 %",
+      "cumple": true
+    },
+    {
+      "criterio": "2. Fecha y hora (o turno) por registro",
+      "umbral": "100 %",
+      "valor": "100.0 % con fecha y hora; turno coherente con la hora en 2592/2592",
+      "cumple": true
+    },
+    {
+      "criterio": "3. Tipo/subtipo de incidencia",
+      "umbral": "presente (deseable: catálogo estable)",
+      "valor": "7 tipos, 23 subtipos, 79 modalidades; 5/7 tipos presentes en todas las semanas",
+      "cumple": true
+    },
+    {
+      "criterio": "4. Días consecutivos cubiertos",
+      "umbral": ">= 42 (deseable >= 90)",
+      "valor": "26 días (2026-05-16 a 2026-06-10)",
+      "cumple": false
+    },
+    {
+      "criterio": "5. Volumen",
+      "umbral": ">= 2 000 registros (deseable >= 50 por día)",
+      "valor": "2592 registros; 99.7 por día en promedio",
+      "cumple": true
+    },
+    {
+      "criterio": "6. Estabilidad de cobertura (registros/día por mes)",
+      "umbral": "sin cambios de nivel > 50 % sin explicar",
+      "valor": "2026-05: 83.7/día; 2026-06: 125.3/día; cambio entre meses [49.7] % (al límite); entre semanas completas [67.3, 119.3, 131.0] /día -> cambios [77.3, 9.8] %. Arranque 16–21 may con 32.0/día (probable puesta en marcha del sistema, no confirmada por la fuente) y último día censurado por el filtro de incidencias cerradas",
+      "cumple": false
+    },
+    {
+      "criterio": "7. Licencia abierta y fuente oficial identificable",
+      "umbral": "sí",
+      "valor": "ODC-By 1.0; MDSJM – Gerencia de Seguridad Ciudadana (PNDA)",
+      "cumple": true
+    },
+    {
+      "criterio": "8. Puntos dentro del límite distrital",
+      "umbral": ">= 90 % (deseable >= 98 %)",
+      "valor": "98.77 % (2560/2592) dentro del límite INEI 150133",
+      "cumple": true
+    },
+    {
+      "criterio": "9. Sin datos personales o eliminables",
+      "umbral": "sí",
+      "valor": "Fuente anonimizada (sin nombres ni descripción libre); DIRECCION es dirección de vía/lote. Barrido de patrones en direccion: {'posible_dni_8_digitos': 0, 'posible_telefono_9_digitos': 0, 'correo': 0, 'posible_placa': 0, 'tratamiento_persona': 0}",
+      "cumple": true
+    }
+  ],
+  "advertencias": [
+    "Criterio 4 NO cumplido: el único extracto publicado cubre 26 días (2026-05-16 a 2026-06-10); el mínimo es 42. No existen extractos anteriores ni posteriores en el PNDA (una sola revisión, 2026-06-10), aunque la ficha declara frecuencia mensual. Los resultados del modelo deben presentarse como exploratorios.",
+    "Criterio 6 NO cumplido: arranque 16–21 may con 32.0 registros/día frente a ~110 desde el 22 may (+77 % entre la primera y la segunda semana completa). Coincide con 'desde el inicio de operaciones del sistema CCO' de los metadatos, pero la fuente no lo confirma. Recomendación para la Fase 2: evaluar excluir 2026-05-16 a 2026-05-21 del entrenamiento o modelarlo explícitamente.",
+    "Censura a la derecha: el dataset solo incluye incidencias cerradas a la fecha de corte. El 2026-06-10 tiene 80 registros y 0 % de cierres > 23 h (frente a ~61–72 % los días previos): faltan las incidencias abiertas que se cerrarían automáticamente al día siguiente. Recomendación: no usar 2026-06-10 (y revisar 2026-06-09) como día de prueba sin corrección.",
+    "El Excel de 01_alcance no se usa como fuente: Excel convirtió en número 67 celdas de ID_INCIDENCIA y alteró 21 ID (ceros a la izquierda y notación científica); dos ID distintos '0e…' quedaron como 0, que es el duplicado aparente (2 591 únicos en 2 592 filas). El CSV original del PNDA tiene 2 592 ID únicos y el mismo contenido. Las hojas 'Calc_Dashboard' y 'Dashboard' son cálculos del autor, no dato fuente.",
+    "Ubigeo: la fuente publica 150141 y lo describe como INEI de SJM, pero en INEI/SIDPOL/límites 150141 es Surquillo; SJM es 150133. El canónico usa 150133. En el CSV se escribe sin comillas: leer ubigeo_inei como texto (dtype=str) para conservar el formato de 6 caracteres.",
+    "32 puntos (1.23 %) caen fuera del límite: 20 a menos de 120 m del borde (Atocongo, Óvalo Los Eucaliptos), 10 entre 290 m y 1,9 km (VES, Chorrillos, Parque Industrial) y 2 errores groseros (Bellavista-Callao a 15 km y lat -9,37 en Áncash). Se marcan con dentro_distrito = False; la Fase 2 decide si los excluye o usa una tolerancia de borde.",
+    "La columna NIVEL de la fuente (Común/Relevante/Grave, 1 687 vacíos) es la gravedad 'asignada por el operador durante la coordinación' (diccionario oficial): se fija después del registro y está vacía en el 100 % de las 'No atendida' con cierre automático. Es posterior al evento ([POST]) y no pasa al canónico; no debe usarse como predictor ni como etiqueta de gravedad.",
+    "1870 incidencias 'No atendida' se cierran después de 23 h (mediana de tiempo de respuesta 1 441 min): patrón de cierre automático. Las columnas [POST] solo sirven para descripción.",
+    "Sesgo de registro: 74,5 % de los registros provienen de 'CAMARAS CECOP' y 77,9 % los reporta un agente municipal; la distribución espacial refleja dónde hay cámaras y patrullaje, no la incidencia real. 20,9 % sin sector y 12,0 % sin zona en la fuente.",
+    "Catálogo con erratas de origen que se conservan tal cual en el canónico (p. ej. 'LLAMDA TELEFONICA', 'PREUNTOS ACONTECIMIENTOS ESPECIALES', 'CONTRA CONTRA LA PERSONA'); solo se normalizaron mayúsculas y espacios dobles. La Fase 2 puede agruparlas.",
+    "Alternativa fuera de Lima registrada pero no recomendada: Callao (Municipalidad Provincial del Callao) publica 913 238 incidencias de cámaras 2023-10 a 2025-11 con coordenadas desde jun-2024, pero es otra provincia, es muy inestable (cambios mensuales de hasta 117 %), 86 % de puntos dentro del distrito Callao, no tiene subtipo y solo el 3 % es 'seguridad ciudadana'. Ver datos/procesados/matriz_candidatos.csv.",
+    "Vía para cumplir el criterio 4 sin cambiar de distrito: los metadatos indican actualización mensual y cortes a demanda desde el sistema interno; el usuario puede solicitar a la MDSJM (tecnologia@munisjm.gob.pe, o por transparencia) un extracto actualizado del mismo dataset. Si llega, basta colocarlo como nueva fuente 'cco_mdsjm_*' y reejecutar 02–05: 02_unificar.py ya deduplica por ID_INCIDENCIA.",
+    "Nota de contexto: el usuario se refirió al distrito como 'SJL', pero el alcance y el dataset corresponden a San Juan de Miraflores (SJM, 150133), no a San Juan de Lurigancho (150132)."
+  ]
+}

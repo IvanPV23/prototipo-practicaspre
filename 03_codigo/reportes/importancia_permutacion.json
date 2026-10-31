@@ -1,0 +1,362 @@
+{
+  "regresion_logistica": {
+    "macro_f1_base_valid": 0.5012,
+    "por_variable": {
+      "lag1_turno": {
+        "media": 0.0046,
+        "desv": 0.0069
+      },
+      "lag7_turno": {
+        "media": 0.0221,
+        "desv": 0.0056
+      },
+      "suma3_turno": {
+        "media": 0.0877,
+        "desv": 0.0109
+      },
+      "media7_turno": {
+        "media": 0.032,
+        "desv": 0.0078
+      },
+      "lag1_celda": {
+        "media": 0.01,
+        "desv": 0.0044
+      },
+      "suma7_celda": {
+        "media": 0.0716,
+        "desv": 0.0116
+      },
+      "dias_desde_ultima": {
+        "media": 0.007,
+        "desv": 0.0053
+      },
+      "gravedad_media7_celda": {
+        "media": 0.0046,
+        "desv": 0.0046
+      },
+      "nivel_lag1_turno": {
+        "media": 0.0191,
+        "desv": 0.0087
+      },
+      "vecinos_lag1_turno": {
+        "media": 0.0087,
+        "desv": 0.0061
+      },
+      "vecinos_suma7": {
+        "media": 0.0217,
+        "desv": 0.008
+      },
+      "dia_semana": {
+        "media": 0.0269,
+        "desv": 0.0119
+      },
+      "fin_de_semana": {
+        "media": 0.0,
+        "desv": 0.0
+      },
+      "turno": {
+        "media": 0.0397,
+        "desv": 0.0119
+      },
+      "distrito_lag1_turno": {
+        "media": 0.0152,
+        "desv": 0.0102
+      },
+      "distrito_lag1": {
+        "media": 0.0082,
+        "desv": 0.0035
+      },
+      "distrito_media7": {
+        "media": -0.0014,
+        "desv": 0.0023
+      }
+    },
+    "por_grupo": {
+      "historial": {
+        "media": 0.1419,
+        "desv": 0.0145,
+        "suma_individual": 0.2587,
+        "variables": [
+          "lag1_turno",
+          "lag7_turno",
+          "suma3_turno",
+          "media7_turno",
+          "lag1_celda",
+          "suma7_celda",
+          "dias_desde_ultima",
+          "gravedad_media7_celda",
+          "nivel_lag1_turno"
+        ]
+      },
+      "espacial": {
+        "media": 0.0365,
+        "desv": 0.0104,
+        "suma_individual": 0.0304,
+        "variables": [
+          "vecinos_lag1_turno",
+          "vecinos_suma7"
+        ]
+      },
+      "calendario": {
+        "media": 0.0439,
+        "desv": 0.0135,
+        "suma_individual": 0.0666,
+        "variables": [
+          "dia_semana",
+          "fin_de_semana",
+          "turno"
+        ]
+      },
+      "contexto": {
+        "media": 0.0231,
+        "desv": 0.0096,
+        "suma_individual": 0.022,
+        "variables": [
+          "distrito_lag1_turno",
+          "distrito_lag1",
+          "distrito_media7"
+        ]
+      }
+    }
+  },
+  "random_forest": {
+    "macro_f1_base_valid": 0.4975,
+    "por_variable": {
+      "lag1_turno": {
+        "media": 0.0069,
+        "desv": 0.003
+      },
+      "lag7_turno": {
+        "media": 0.0087,
+        "desv": 0.0036
+      },
+      "suma3_turno": {
+        "media": 0.0309,
+        "desv": 0.0127
+      },
+      "media7_turno": {
+        "media": 0.0273,
+        "desv": 0.0099
+      },
+      "lag1_celda": {
+        "media": 0.0103,
+        "desv": 0.005
+      },
+      "suma7_celda": {
+        "media": 0.0373,
+        "desv": 0.0075
+      },
+      "dias_desde_ultima": {
+        "media": 0.0072,
+        "desv": 0.0032
+      },
+      "gravedad_media7_celda": {
+        "media": 0.0145,
+        "desv": 0.0085
+      },
+      "nivel_lag1_turno": {
+        "media": -0.0007,
+        "desv": 0.0051
+      },
+      "vecinos_lag1_turno": {
+        "media": 0.0221,
+        "desv": 0.0082
+      },
+      "vecinos_suma7": {
+        "media": 0.012,
+        "desv": 0.0071
+      },
+      "dia_semana": {
+        "media": 0.0032,
+        "desv": 0.0024
+      },
+      "fin_de_semana": {
+        "media": 0.0,
+        "desv": 0.0
+      },
+      "turno": {
+        "media": 0.013,
+        "desv": 0.0072
+      },
+      "distrito_lag1_turno": {
+        "media": 0.0095,
+        "desv": 0.0044
+      },
+      "distrito_lag1": {
+        "media": 0.0052,
+        "desv": 0.0033
+      },
+      "distrito_media7": {
+        "media": 0.0,
+        "desv": 0.0
+      }
+    },
+    "por_grupo": {
+      "historial": {
+        "media": 0.1395,
+        "desv": 0.0129,
+        "suma_individual": 0.1424,
+        "variables": [
+          "lag1_turno",
+          "lag7_turno",
+          "suma3_turno",
+          "media7_turno",
+          "lag1_celda",
+          "suma7_celda",
+          "dias_desde_ultima",
+          "gravedad_media7_celda",
+          "nivel_lag1_turno"
+        ]
+      },
+      "espacial": {
+        "media": 0.029,
+        "desv": 0.0105,
+        "suma_individual": 0.0341,
+        "variables": [
+          "vecinos_lag1_turno",
+          "vecinos_suma7"
+        ]
+      },
+      "calendario": {
+        "media": 0.0145,
+        "desv": 0.0065,
+        "suma_individual": 0.0162,
+        "variables": [
+          "dia_semana",
+          "fin_de_semana",
+          "turno"
+        ]
+      },
+      "contexto": {
+        "media": 0.0077,
+        "desv": 0.0069,
+        "suma_individual": 0.0147,
+        "variables": [
+          "distrito_lag1_turno",
+          "distrito_lag1",
+          "distrito_media7"
+        ]
+      }
+    }
+  },
+  "gradient_boosting": {
+    "macro_f1_base_valid": 0.4878,
+    "por_variable": {
+      "lag1_turno": {
+        "media": 0.0014,
+        "desv": 0.0029
+      },
+      "lag7_turno": {
+        "media": 0.0068,
+        "desv": 0.0041
+      },
+      "suma3_turno": {
+        "media": 0.038,
+        "desv": 0.0094
+      },
+      "media7_turno": {
+        "media": 0.0019,
+        "desv": 0.0066
+      },
+      "lag1_celda": {
+        "media": 0.0207,
+        "desv": 0.0047
+      },
+      "suma7_celda": {
+        "media": 0.0691,
+        "desv": 0.0131
+      },
+      "dias_desde_ultima": {
+        "media": 0.0096,
+        "desv": 0.0038
+      },
+      "gravedad_media7_celda": {
+        "media": 0.0098,
+        "desv": 0.0088
+      },
+      "nivel_lag1_turno": {
+        "media": -0.0008,
+        "desv": 0.0009
+      },
+      "vecinos_lag1_turno": {
+        "media": 0.0265,
+        "desv": 0.0075
+      },
+      "vecinos_suma7": {
+        "media": 0.0129,
+        "desv": 0.0092
+      },
+      "dia_semana": {
+        "media": 0.0074,
+        "desv": 0.0021
+      },
+      "fin_de_semana": {
+        "media": 0.0,
+        "desv": 0.0
+      },
+      "turno": {
+        "media": 0.0322,
+        "desv": 0.0141
+      },
+      "distrito_lag1_turno": {
+        "media": 0.0117,
+        "desv": 0.0071
+      },
+      "distrito_lag1": {
+        "media": 0.0009,
+        "desv": 0.003
+      },
+      "distrito_media7": {
+        "media": 0.0,
+        "desv": 0.0
+      }
+    },
+    "por_grupo": {
+      "historial": {
+        "media": 0.1223,
+        "desv": 0.0122,
+        "suma_individual": 0.1565,
+        "variables": [
+          "lag1_turno",
+          "lag7_turno",
+          "suma3_turno",
+          "media7_turno",
+          "lag1_celda",
+          "suma7_celda",
+          "dias_desde_ultima",
+          "gravedad_media7_celda",
+          "nivel_lag1_turno"
+        ]
+      },
+      "espacial": {
+        "media": 0.0375,
+        "desv": 0.0123,
+        "suma_individual": 0.0394,
+        "variables": [
+          "vecinos_lag1_turno",
+          "vecinos_suma7"
+        ]
+      },
+      "calendario": {
+        "media": 0.0322,
+        "desv": 0.0106,
+        "suma_individual": 0.0396,
+        "variables": [
+          "dia_semana",
+          "fin_de_semana",
+          "turno"
+        ]
+      },
+      "contexto": {
+        "media": 0.012,
+        "desv": 0.0072,
+        "suma_individual": 0.0126,
+        "variables": [
+          "distrito_lag1_turno",
+          "distrito_lag1",
+          "distrito_media7"
+        ]
+      }
+    }
+  }
+}

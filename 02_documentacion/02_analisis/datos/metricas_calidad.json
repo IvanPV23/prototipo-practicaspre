@@ -1,0 +1,156 @@
+{
+  "registros_canonico": 2592,
+  "nulos": {
+    "zona": 312,
+    "sector": 543
+  },
+  "dup_id": 0,
+  "dup_contenido": 0,
+  "coordenadas_distintas": 1837,
+  "fuera_limite": 32,
+  "fuera_borde_150m": 20,
+  "fuera_lejos": 10,
+  "fuera_groseros": 2,
+  "area_km2": 22.36,
+  "turno_inconsistente": 0,
+  "cortes_turno": {
+    "Mañana": "06:06–13:59",
+    "Tarde": "14:10–21:59",
+    "Noche": "22:08–23:59 y 00:00–05:59"
+  },
+  "sin_sector": 543,
+  "sin_zona": 312,
+  "n_tipos": 7,
+  "n_subtipos": 23,
+  "subtipo_corregido": 41,
+  "canal_corregido": 318,
+  "registros_por_tipo": {
+    "Presuntas infracciones": 1353,
+    "Presuntas faltas": 622,
+    "Infraestructura y riesgo": 265,
+    "Operativos": 176,
+    "Ayuda y apoyo": 113,
+    "Presuntamente delictivas": 53,
+    "Acontecimientos especiales": 10
+  },
+  "media_mayo": 83.7,
+  "media_junio": 125.3,
+  "media_arranque": 32.0,
+  "media_estable_mayo": 114.7,
+  "media_estable_junio": 133.1,
+  "noche_arranque": 0,
+  "pct_camaras": 74.5,
+  "pct_agente_municipal": 77.9,
+  "pct_delictivas": 2.0,
+  "cobertura_canal": {
+    "Cámaras CECOP": {
+      "A: 16–21 may (arranque, 6 d)": 29.5,
+      "B: 22–28 may (7 d)": 69.9,
+      "C: 29 may–4 jun (7 d)": 98.4,
+      "cambio_B_a_C_%": 40.9
+    },
+    "WhatsApp/llamada": {
+      "A: 16–21 may (arranque, 6 d)": 2.2,
+      "B: 22–28 may (7 d)": 27.9,
+      "C: 29 may–4 jun (7 d)": 31.3,
+      "cambio_B_a_C_%": 12.3
+    },
+    "Otros": {
+      "A: 16–21 may (arranque, 6 d)": 0.3,
+      "B: 22–28 may (7 d)": 1.0,
+      "C: 29 may–4 jun (7 d)": 1.3,
+      "cambio_B_a_C_%": 28.6
+    },
+    "TOTAL": {
+      "A: 16–21 may (arranque, 6 d)": 32.0,
+      "B: 22–28 may (7 d)": 98.7,
+      "C: 29 may–4 jun (7 d)": 131.0,
+      "cambio_B_a_C_%": 32.7
+    }
+  },
+  "cambio_B_C_total": 32.7,
+  "cambio_B_C_camaras": 40.9,
+  "cambio_B_C_whatsapp_llamada": 12.3,
+  "cambio_B_C_contribuyente": 34.4,
+  "cambio_B_C_agente_municipal": 32.9,
+  "aporte_camaras_aumento_pct": 88.2,
+  "arranque_por_dia_camaras": 29.5,
+  "arranque_por_dia_whatsapp_llamada": 2.2,
+  "corte_observado": "2026-06-10 15:09:00",
+  "mediana_cierre_auto_min": 1443.0,
+  "limite_censura": "2026-06-09 15:06:00",
+  "registros_0609": 108,
+  "registros_0610": 80,
+  "pct_cierre23_0609": 61.1,
+  "pct_cierre23_0610": 0.0,
+  "tarde_0609": 23,
+  "noche_0609": 20,
+  "media_tarde": 30.6,
+  "media_noche": 40.2,
+  "pct_cierre23_rango_estable": [
+    62.2,
+    83.8
+  ],
+  "registros_limpios": 2580,
+  "reglas": [
+    {
+      "id": "R1",
+      "regla": "Leer id_incidencia, ubigeo_inei, zona y sector como texto",
+      "filas_afectadas": 0,
+      "accion": "tipado"
+    },
+    {
+      "id": "R2",
+      "regla": "Excluir puntos a más de 150 m del límite distrital",
+      "filas_afectadas": 12,
+      "accion": "excluir"
+    },
+    {
+      "id": "R3",
+      "regla": "Conservar puntos fuera del límite a ≤150 m (marcados en_tolerancia_borde)",
+      "filas_afectadas": 20,
+      "accion": "marcar"
+    },
+    {
+      "id": "R4",
+      "regla": "Marcar 16–21 may como 'arranque' (solo historial para rezagos)",
+      "filas_afectadas": 192,
+      "accion": "marcar"
+    },
+    {
+      "id": "R5",
+      "regla": "Marcar 9–10 jun como 'censurado' (fuera de la tabla de modelado)",
+      "filas_afectadas": 185,
+      "accion": "marcar"
+    },
+    {
+      "id": "R6",
+      "regla": "Etiqueta corta de tipo y corrección de erratas en subtipo/canal (copias normalizadas)",
+      "filas_afectadas": 359,
+      "accion": "normalizar"
+    },
+    {
+      "id": "R7",
+      "regla": "Eliminar columnas [POST] (estado_final, fecha_hora_cierre, tiempo_respuesta_min) del dataset limpio",
+      "filas_afectadas": 0,
+      "accion": "eliminar columnas"
+    },
+    {
+      "id": "R8",
+      "regla": "Duplicados de ID o de contenido",
+      "filas_afectadas": 0,
+      "accion": "ninguna (no hay)"
+    },
+    {
+      "id": "R9",
+      "regla": "Sector/zona vacíos se mantienen nulos; la ubicación se toma de las coordenadas",
+      "filas_afectadas": 543,
+      "accion": "mantener"
+    }
+  ],
+  "limpias_por_periodo": {
+    "estable": 2203,
+    "arranque": 192,
+    "censurado": 185
+  }
+}

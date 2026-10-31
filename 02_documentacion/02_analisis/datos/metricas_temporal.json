@@ -1,0 +1,137 @@
+{
+  "ventana_eda": [
+    "2026-05-22",
+    "2026-06-04"
+  ],
+  "registros_eda": 1602,
+  "dias_eda": 14,
+  "dia_min": 83,
+  "dia_max": 169,
+  "dia_media": 114.4,
+  "dia_cv": 0.223,
+  "turno": {
+    "Mañana": {
+      "registros": 714,
+      "pct": 44.6,
+      "media": 51.0
+    },
+    "Tarde": {
+      "registros": 388,
+      "pct": 24.2,
+      "media": 27.7
+    },
+    "Noche": {
+      "registros": 500,
+      "pct": 31.2,
+      "media": 35.7
+    }
+  },
+  "dia_turno": {
+    "Lun": {
+      "Mañana": 53.5,
+      "Tarde": 27.5,
+      "Noche": 30.0
+    },
+    "Mar": {
+      "Mañana": 52.5,
+      "Tarde": 30.0,
+      "Noche": 33.5
+    },
+    "Mié": {
+      "Mañana": 42.5,
+      "Tarde": 23.0,
+      "Noche": 19.0
+    },
+    "Jue": {
+      "Mañana": 54.5,
+      "Tarde": 22.0,
+      "Noche": 31.0
+    },
+    "Vie": {
+      "Mañana": 53.5,
+      "Tarde": 32.5,
+      "Noche": 38.0
+    },
+    "Sáb": {
+      "Mañana": 43.5,
+      "Tarde": 30.0,
+      "Noche": 43.5
+    },
+    "Dom": {
+      "Mañana": 57.0,
+      "Tarde": 29.0,
+      "Noche": 55.0
+    }
+  },
+  "finde_vs_laboral": {
+    "finde": {
+      "Mañana": 50.2,
+      "Tarde": 29.5,
+      "Noche": 49.2
+    },
+    "laboral": {
+      "Mañana": 51.3,
+      "Tarde": 27.0,
+      "Noche": 30.3
+    }
+  },
+  "hora_pico": 8,
+  "hora_valle": 5,
+  "por_hora": {
+    "0": 7.5,
+    "1": 5.29,
+    "2": 3.86,
+    "3": 3.14,
+    "4": 2.79,
+    "5": 1.5,
+    "6": 7.57,
+    "7": 6.0,
+    "8": 8.14,
+    "9": 7.07,
+    "10": 5.71,
+    "11": 6.0,
+    "12": 4.57,
+    "13": 5.93,
+    "14": 3.21,
+    "15": 3.43,
+    "16": 3.5,
+    "17": 3.14,
+    "18": 3.5,
+    "19": 3.21,
+    "20": 3.64,
+    "21": 4.07,
+    "22": 5.43,
+    "23": 6.21
+  },
+  "tipo_pct_eda": {
+    "Presuntas infracciones": 53.1,
+    "Presuntas faltas": 22.1,
+    "Infraestructura y riesgo": 9.9,
+    "Operativos": 7.3,
+    "Ayuda y apoyo": 4.9,
+    "Presuntamente delictivas": 2.3,
+    "Acontecimientos especiales": 0.4
+  },
+  "delictivas_max_dia": 6,
+  "acf_distrito": {
+    "1": 0.379,
+    "2": 0.352,
+    "3": -0.278,
+    "4": -0.254,
+    "5": -0.428,
+    "6": -0.281,
+    "7": 0.69
+  },
+  "corr_celda_spearman": {
+    "lag1_celda": 0.335,
+    "lag1_turno": 0.271,
+    "lag7_turno": 0.242
+  },
+  "corr_celda_pearson": {
+    "lag1_celda": 0.42,
+    "lag1_turno": 0.374,
+    "lag7_turno": 0.262
+  },
+  "n_obs_corr": 1869,
+  "n_celdas_corr": 89
+}

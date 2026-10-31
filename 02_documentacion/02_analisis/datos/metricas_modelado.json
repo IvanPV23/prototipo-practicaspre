@@ -1,0 +1,164 @@
+{
+  "particion": {
+    "train": [
+      "2026-05-22",
+      "2026-05-31"
+    ],
+    "valid": [
+      "2026-06-01",
+      "2026-06-04"
+    ],
+    "test": [
+      "2026-06-05",
+      "2026-06-08"
+    ]
+  },
+  "b": 1.0,
+  "filas_tabla": 4644,
+  "pct_ceros_tabla": 71.1,
+  "distribucion": {
+    "train": {
+      "Bajo": 1858,
+      "Medio": 480,
+      "Alto": 242
+    },
+    "valid": {
+      "Bajo": 756,
+      "Medio": 172,
+      "Alto": 104
+    },
+    "test": {
+      "Bajo": 686,
+      "Medio": 204,
+      "Alto": 142
+    }
+  },
+  "distribucion_pct": {
+    "train": {
+      "Bajo": 72.0,
+      "Medio": 18.6,
+      "Alto": 9.4
+    },
+    "valid": {
+      "Bajo": 73.3,
+      "Medio": 16.7,
+      "Alto": 10.1
+    },
+    "test": {
+      "Bajo": 66.5,
+      "Medio": 19.8,
+      "Alto": 13.8
+    }
+  },
+  "razon_bajo_alto_train": 7.7,
+  "linea_base": {
+    "macro_f1_valid": 0.439,
+    "exactitud_valid": 0.6357,
+    "macro_f1_valid_siempre_bajo": 0.2819,
+    "por_clase_valid": {
+      "Bajo": {
+        "precision": 0.8,
+        "recall": 0.769,
+        "f1-score": 0.784,
+        "support": 756.0
+      },
+      "Medio": {
+        "precision": 0.22,
+        "recall": 0.244,
+        "f1-score": 0.231,
+        "support": 172.0
+      },
+      "Alto": {
+        "precision": 0.287,
+        "recall": 0.317,
+        "f1-score": 0.301,
+        "support": 104.0
+      }
+    },
+    "macro_f1_valid_por_dia": {
+      "2026-06-01": 0.337,
+      "2026-06-02": 0.497,
+      "2026-06-03": 0.469,
+      "2026-06-04": 0.467
+    },
+    "macro_f1_valid_por_turno": {
+      "Mañana": 0.46,
+      "Noche": 0.431,
+      "Tarde": 0.394
+    },
+    "matriz_confusion_valid": [
+      [
+        581,
+        121,
+        54
+      ],
+      [
+        102,
+        42,
+        28
+      ],
+      [
+        43,
+        28,
+        33
+      ]
+    ]
+  },
+  "asociacion_spearman_train": {
+    "lag1_turno": 0.256,
+    "lag7_turno": 0.203,
+    "suma3_turno": 0.314,
+    "media7_turno": 0.325,
+    "lag1_celda": 0.307,
+    "suma7_celda": 0.346,
+    "dias_desde_ultima": -0.263,
+    "gravedad_media7_celda": 0.078,
+    "vecinos_lag1_turno": 0.243,
+    "vecinos_suma7": 0.245,
+    "dia_semana": 0.08,
+    "fin_de_semana": 0.066,
+    "distrito_lag1_turno": 0.089,
+    "distrito_lag1": 0.084,
+    "distrito_media7": 0.074
+  },
+  "prueba_fuga": {
+    "fechas": 18,
+    "escenarios": [
+      "historia truncada en d",
+      "incidencias falsas inyectadas en d"
+    ],
+    "variables": 17,
+    "resultado": "superada"
+  },
+  "sidpol": {
+    "periodo": "2018-01 a 2026-09",
+    "total": 90272,
+    "por_anio": {
+      "2018": 9592,
+      "2019": 9401,
+      "2020": 6760,
+      "2021": 9215,
+      "2022": 10934,
+      "2023": 13623,
+      "2024": 12876,
+      "2025": 10383,
+      "2026": 7488
+    },
+    "composicion_ult12_pct": {
+      "Otros": 36.6,
+      "Violencia contra la mujer e integrantes": 35.1,
+      "Hurto": 13.6,
+      "Robo": 7.1,
+      "Estafa": 4.0,
+      "Extorsión": 3.4,
+      "Secuestro": 0.2
+    },
+    "mayo_junio_2026": {
+      "2026-05": 883,
+      "2026-06": 818
+    }
+  },
+  "faltantes": {
+    "lag7_turno": 258
+  }
+}

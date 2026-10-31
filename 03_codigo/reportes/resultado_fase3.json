@@ -1,0 +1,170 @@
+{
+  "version": 1,
+  "generado": "2026-10-31T09:10:10-05:00",
+  "modelos": [
+    {
+      "nombre": "persistencia",
+      "macro_f1_valid": 0.439,
+      "macro_f1_test": 0.4318,
+      "hiperparametros": {
+        "regla": "nivel_lag1_turno"
+      },
+      "version": "1.1.0+9515372207"
+    },
+    {
+      "nombre": "regresion_logistica",
+      "macro_f1_valid": 0.4799,
+      "macro_f1_test": 0.4349,
+      "hiperparametros": {
+        "C": 10.0,
+        "calibracion": {
+          "desplazamiento": [
+            0.0,
+            1.4,
+            1.6
+          ],
+          "sesgo": [
+            0.0,
+            -1.472573412502387,
+            -1.9430385990091548
+          ],
+          "temperatura": 1.6453842016566873
+        }
+      },
+      "version": "1.1.0+e1b74d5780"
+    },
+    {
+      "nombre": "random_forest",
+      "macro_f1_valid": 0.4769,
+      "macro_f1_test": 0.448,
+      "hiperparametros": {
+        "calibracion": {
+          "desplazamiento": [
+            0.0,
+            1.1,
+            1.1
+          ],
+          "sesgo": [
+            0.0,
+            -1.4356599309921114,
+            -1.8702361463117978
+          ],
+          "temperatura": 1.019617274814547
+        },
+        "max_depth": 8,
+        "min_samples_leaf": 5,
+        "n_estimators": 300
+      },
+      "version": "1.1.0+4ad657a8a5"
+    },
+    {
+      "nombre": "gradient_boosting",
+      "macro_f1_valid": 0.4745,
+      "macro_f1_test": 0.4412,
+      "hiperparametros": {
+        "calibracion": {
+          "desplazamiento": [
+            0.0,
+            1.0,
+            1.0
+          ],
+          "sesgo": [
+            0.0,
+            -1.3615383707859479,
+            -1.860247608148413
+          ],
+          "temperatura": 1.3431757847799617
+        },
+        "learning_rate": 0.05,
+        "max_depth": 3,
+        "n_estimators": 100
+      },
+      "version": "1.1.0+ef3dae3dc8"
+    }
+  ],
+  "modelo_seleccionado": {
+    "nombre": "regresion_logistica",
+    "criterio": "Mejor Macro F1 en validación",
+    "ruta_artefacto": "03_codigo/modelos/regresion_logistica-1.1.0_e1b74d5780.joblib",
+    "version": "1.1.0+e1b74d5780"
+  },
+  "hipotesis": {
+    "H1": {
+      "resultado": "se_sostiene",
+      "evidencia": "Macro F1 en prueba (evaluación única, modelos ajustados con train y elegidos con valid): persistencia 0.432, regresión logística 0.435, Random Forest 0.448, Gradient Boosting 0.441. El mejor ensamble (Random Forest) supera a la regresión logística y a la persistencia. Exploratorio: 4 días de prueba (1 032 filas)."
+    },
+    "HE1": {
+      "resultado": "se_sostiene",
+      "evidencia": "Importancia por permutación sobre validación del modelo seleccionado (Regresión logística), permutando cada grupo completo: caída media del Macro F1 historial 0.142 vs calendario 0.044 (espacial 0.036, contexto 0.023). El historial supera al calendario en 3 de 3 modelos ML."
+    }
+  },
+  "verificacion_fase2": {
+    "incidencias_limpias": {
+      "obtenido": 2580,
+      "handoff": 2580
+    },
+    "microzonas_activas": {
+      "obtenido": 86,
+      "handoff": 86
+    },
+    "filas_tabla": {
+      "obtenido": 4644,
+      "handoff": 4644
+    },
+    "macro_f1_persistencia_valid": {
+      "obtenido": 0.439,
+      "handoff": 0.439
+    },
+    "coincide_con_handoff": true
+  },
+  "base_datos": {
+    "ruta": "03_codigo/data/seguridad.db",
+    "tablas": [
+      "asignacion",
+      "ejecucion_pipeline",
+      "feature",
+      "fuente_datos",
+      "incidencia",
+      "microzona",
+      "modelo",
+      "observacion",
+      "prediccion",
+      "prioridad",
+      "recurso_disponible",
+      "tipo_incidencia"
+    ]
+  },
+  "tests": {
+    "total": 72,
+    "pasados": 72,
+    "fallidos": 0
+  },
+  "comandos": {
+    "instalar": "python -m venv .venv && .venv\\Scripts\\python -m pip install -r requirements.txt -r requirements-dev.txt && .venv\\Scripts\\python -m pip install -e . --no-deps",
+    "pipeline": "python -m seguridad_ciudadana todo",
+    "app": "streamlit run app/Inicio.py",
+    "tests": "pytest"
+  },
+  "fecha_operativa": "2026-06-09",
+  "reportes": [
+    "busqueda_hiperparametros.json",
+    "importancia_permutacion.json",
+    "metricas_modelos.json",
+    "metricas_por_dia_turno.json",
+    "tests_resumen.json",
+    "verificacion_construccion.json"
+  ],
+  "advertencias": [
+    "Periodo muy corto (18 días utilizables: 10 train / 4 valid / 4 test): métricas exploratorias y de alta varianza; ver Macro F1 por día y por turno e intervalos bootstrap en reportes/metricas_por_dia_turno.json.",
+    "IC 95 % (bootstrap por bloques de día) del Macro F1 en prueba del modelo seleccionado: [0.406, 0.456].",
+    "Desplazamiento de distribución: la proporción de Alto sube de 9,4 % (train) a 10,1 % (valid) y 13,8 % (test); validación no tiene fin de semana y prueba incluye sábado, domingo y el feriado del 7 jun.",
+    "9 y 10 jun están censurados en la fuente: la fecha operativa (9 jun) se predice con historia hasta el 8 jun y no puede evaluarse; las fechas de prueba se muestran en la app como demostración.",
+    "lag7_turno nulo solo el 22 may (258 filas): imputado fila a fila con media7_turno (sin fuga).",
+    "feriado es constante en train y valid: se conserva en la tabla y en la BD pero no entra al estimador.",
+    "El objetivo mide incidencias registradas por el CCO (≈3/4 por cámaras), no delitos; no usar para etiquetar zonas.",
+    "Los recursos del módulo de segundo nivel son ilustrativos (ingresados a mano), no datos de la municipalidad.",
+    "El modelo vigente se ajustó solo con train y se calibró solo con valid (no se reentrenó con train+valid) para que la cifra de prueba corresponda exactamente al artefacto publicado.",
+    "Calibración posterior con validación (ADR 0007): la proporción de Alto predicha en prueba pasa de 34,3 % sin calibrar a 22,5 % (observada 13,8 %). La calibración se decidió solo con validación, pero la prueba ya se había leído una vez con v1.0.0: esta es su segunda lectura y debe interpretarse con esa cautela.",
+    "El Macro F1 de validación de los modelos calibrados se calcula dejando un día fuera (cada día con un calibrador ajustado en los otros tres), para no premiar el ajuste en la misma validación que elige el modelo."
+  ]
+}

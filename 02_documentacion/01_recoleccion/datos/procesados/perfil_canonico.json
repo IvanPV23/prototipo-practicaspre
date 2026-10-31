@@ -1,0 +1,467 @@
+{
+  "registros": 2592,
+  "fecha_min": "2026-05-16",
+  "fecha_max": "2026-06-10",
+  "dias_rango": 26,
+  "dias_con_registros": 26,
+  "max_dias_consecutivos": 26,
+  "pct_georreferenciado": 100.0,
+  "pct_dentro_distrito": 98.77,
+  "fuera_del_distrito": [
+    {
+      "id_incidencia": "4bc0aa52",
+      "lat": "-12.157409",
+      "lon": "-76.983457",
+      "direccion": "Ca. 4 Mz.B - Lt.14, San Juan de Miraflores 15056, Perú"
+    },
+    {
+      "id_incidencia": "bc191d74",
+      "lat": "-12.172587",
+      "lon": "-76.98108",
+      "direccion": "Av. Los Eucaliptos 201, San Juan de Miraflores 15058, Perú"
+    },
+    {
+      "id_incidencia": "fcf2fab0",
+      "lat": "-12.202685",
+      "lon": "-76.974617",
+      "direccion": "Mz. J1 Lote 26 Parcela II. Parque Industrial"
+    },
+    {
+      "id_incidencia": "cd701309",
+      "lat": "-12.172912",
+      "lon": "-76.981134",
+      "direccion": "Av. Los Eucaliptos Mz.B1 - Lt.16, San Juan de Miraflores 15058, Perú"
+    },
+    {
+      "id_incidencia": "b213e30f",
+      "lat": "-12.174209",
+      "lon": "-76.981211",
+      "direccion": "Av. Los Eucaliptos Mz.C - Lt.14, San Juan de Miraflores 15058, Perú"
+    },
+    {
+      "id_incidencia": "5b7bb95e",
+      "lat": "-12.161597283105484",
+      "lon": "-76.95737163994936",
+      "direccion": "Calle A Mz.A - Lt.4, Villa María del Triunfo 15828, Perú"
+    },
+    {
+      "id_incidencia": "111e34c6",
+      "lat": "-12.163544348208374",
+      "lon": "-76.95793420431413",
+      "direccion": "Calle Santa Patricia Mz.H - Lt.4, Villa María del Triunfo 15828, Perú"
+    },
+    {
+      "id_incidencia": "460fe891",
+      "lat": "-12.13517",
+      "lon": "-76.973786",
+      "direccion": "Calle 7 de Junio Mz.H - Lt.1, San Juan de Miraflores 15803, Perú"
+    },
+    {
+      "id_incidencia": "6dc389e6",
+      "lat": "-12.202685",
+      "lon": "-76.974617",
+      "direccion": "Mz. J1 Lote 26 Parcela II. Parque Industrial"
+    },
+    {
+      "id_incidencia": "49a20a43",
+      "lat": "-12.171979",
+      "lon": "-76.981238",
+      "direccion": "R2H9+5F9 Ovalo Eucaliptos, Av. Alipio Ponce"
+    },
+    {
+      "id_incidencia": "aab881d8",
+      "lat": "-12.156412760838128",
+      "lon": "-76.98387460977536",
+      "direccion": "San Juan de Miraflores Terminal Atocongo, San Juan de Miraflores 15056, Perú"
+    },
+    {
+      "id_incidencia": "bfd8366d",
+      "lat": "-12.206207764194524",
+      "lon": "-76.97813186684813",
+      "direccion": "Morro De Arica Mz.C1 - Lt.22, Villa EL Salvador 15058, Perú"
+    },
+    {
+      "id_incidencia": "6a8b8492",
+      "lat": "-12.171979",
+      "lon": "-76.981238",
+      "direccion": "R2H9+5F9 Ovalo Eucaliptos, Av. Alipio Ponce"
+    },
+    {
+      "id_incidencia": "33992b6e",
+      "lat": "-12.207011",
+      "lon": "-76.97728",
+      "direccion": "Q2VF+529, 24 de Junio"
+    },
+    {
+      "id_incidencia": "5268fca7",
+      "lat": "-12.150797284973606",
+      "lon": "-76.98379903650749",
+      "direccion": "Atocongo, Lima, Perú"
+    },
+    {
+      "id_incidencia": "2cb01459",
+      "lat": "-12.207011",
+      "lon": "-76.97728",
+      "direccion": "Q2VF+529, 24 de Junio"
+    },
+    {
+      "id_incidencia": "1b22a57b",
+      "lat": "-12.149738",
+      "lon": "-76.98324",
+      "direccion": "Puente Atocongo, V228+4P2, PE-1S, San Juan de Miraflores 15056, Perú"
+    },
+    {
+      "id_incidencia": "9ab9acba",
+      "lat": "-12.149738",
+      "lon": "-76.98324",
+      "direccion": "Puente Atocongo, V228+4P2, PE-1S, San Juan de Miraflores 15056, Perú"
+    },
+    {
+      "id_incidencia": "56793ffa",
+      "lat": "-9.367524",
+      "lon": "-77.071592",
+      "direccion": "Av. Los Lirios, 02325, Perú"
+    },
+    {
+      "id_incidencia": "ae316f2d",
+      "lat": "-12.171894381042067",
+      "lon": "-76.98140719806656",
+      "direccion": "Residencial Héroes De San Juan, San Juan de Miraflores 15056, Perú"
+    },
+    {
+      "id_incidencia": "804fbf1b",
+      "lat": "-12.149259911397875",
+      "lon": "-76.98380997010189",
+      "direccion": "Paradero Pte. Atocongo, Santiago de Surco 15056, Perú"
+    },
+    {
+      "id_incidencia": "09db15da",
+      "lat": "-12.162584",
+      "lon": "-76.98523",
+      "direccion": "R2P7+RWG, Santiago de Surco 15056, Perú"
+    },
+    {
+      "id_incidencia": "b1225e60",
+      "lat": "-12.202685",
+      "lon": "-76.974617",
+      "direccion": "Mz. J1 Lote 26 Parcela II. Parque Industrial"
+    },
+    {
+      "id_incidencia": "adafce82",
+      "lat": "-12.207011",
+      "lon": "-76.97728",
+      "direccion": "Q2VF+529, 24 de Junio"
+    },
+    {
+      "id_incidencia": "1a57d73a",
+      "lat": "-12.149586968878276",
+      "lon": "-76.98386458011501",
+      "direccion": "Paradero Pte. Atocongo, Santiago de Surco 15056, Perú"
+    },
+    {
+      "id_incidencia": "a515e862",
+      "lat": "-12.190728277447846",
+      "lon": "-76.98201192888283",
+      "direccion": "José Olaya, Chorrillos 15058, Perú"
+    },
+    {
+      "id_incidencia": "d0441d9c",
+      "lat": "-12.191967833481003",
+      "lon": "-76.95623019945398",
+      "direccion": "MERCADO CORAZON DE JESUS"
+    },
+    {
+      "id_incidencia": "476c78fe",
+      "lat": "-12.171979",
+      "lon": "-76.981238",
+      "direccion": "R2H9+5F9 Ovalo Eucaliptos, Av. Alipio Ponce"
+    },
+    {
+      "id_incidencia": "141cc0bd",
+      "lat": "-12.171986561888389",
+      "lon": "-76.98128724945457",
+      "direccion": "R2H9+5F9 Ovalo Eucaliptos, Av. Alipio Ponce, Chorrillos 15056, Perú"
+    },
+    {
+      "id_incidencia": "ec0b80e5",
+      "lat": "-12.212342",
+      "lon": "-76.975961",
+      "direccion": "Puente Lechon, Villa EL Salvador 15058, Perú"
+    },
+    {
+      "id_incidencia": "38fff6b1",
+      "lat": "-12.202685",
+      "lon": "-76.974617",
+      "direccion": "Mz. J1 Lote 26 Parcela II. Parque Industrial"
+    },
+    {
+      "id_incidencia": "0e7a845d",
+      "lat": "-12.053138",
+      "lon": "-77.089734",
+      "direccion": "WWW6+P4R, Bellavista 07006, Perú"
+    }
+  ],
+  "inconsistencias_turno_hora": 0,
+  "registros_por_dia": {
+    "2026-05-16": 4,
+    "2026-05-17": 29,
+    "2026-05-18": 25,
+    "2026-05-19": 23,
+    "2026-05-20": 44,
+    "2026-05-21": 67,
+    "2026-05-22": 101,
+    "2026-05-23": 98,
+    "2026-05-24": 113,
+    "2026-05-25": 101,
+    "2026-05-26": 91,
+    "2026-05-27": 83,
+    "2026-05-28": 104,
+    "2026-05-29": 148,
+    "2026-05-30": 138,
+    "2026-05-31": 170,
+    "2026-06-01": 121,
+    "2026-06-02": 141,
+    "2026-06-03": 86,
+    "2026-06-04": 113,
+    "2026-06-05": 152,
+    "2026-06-06": 117,
+    "2026-06-07": 187,
+    "2026-06-08": 148,
+    "2026-06-09": 108,
+    "2026-06-10": 80
+  },
+  "registros_por_mes": [
+    {
+      "mes": "2026-05",
+      "registros": 1339,
+      "dias": 16,
+      "registros_por_dia": 83.7
+    },
+    {
+      "mes": "2026-06",
+      "registros": 1253,
+      "dias": 10,
+      "registros_por_dia": 125.3
+    }
+  ],
+  "cambio_registros_dia_entre_meses_pct": [
+    49.7
+  ],
+  "registros_por_semana": [
+    {
+      "s": "2026-05-11/2026-05-17",
+      "registros": 33,
+      "dias": 2,
+      "registros_por_dia": 16.5
+    },
+    {
+      "s": "2026-05-18/2026-05-24",
+      "registros": 471,
+      "dias": 7,
+      "registros_por_dia": 67.3
+    },
+    {
+      "s": "2026-05-25/2026-05-31",
+      "registros": 835,
+      "dias": 7,
+      "registros_por_dia": 119.3
+    },
+    {
+      "s": "2026-06-01/2026-06-07",
+      "registros": 917,
+      "dias": 7,
+      "registros_por_dia": 131.0
+    },
+    {
+      "s": "2026-06-08/2026-06-14",
+      "registros": 336,
+      "dias": 3,
+      "registros_por_dia": 112.0
+    }
+  ],
+  "censura_ultimos_dias": [
+    {
+      "fecha": "2026-06-07",
+      "registros": 187,
+      "pct_cierre_mayor_23h": 71.1
+    },
+    {
+      "fecha": "2026-06-08",
+      "registros": 148,
+      "pct_cierre_mayor_23h": 71.6
+    },
+    {
+      "fecha": "2026-06-09",
+      "registros": 108,
+      "pct_cierre_mayor_23h": 61.1
+    },
+    {
+      "fecha": "2026-06-10",
+      "registros": 80,
+      "pct_cierre_mayor_23h": 0.0
+    }
+  ],
+  "turno": {
+    "Mañana": 1222,
+    "Noche": 754,
+    "Tarde": 616
+  },
+  "tipo": {
+    "EMISION DE ALERTAS TEMPRANAS EN APOYO A LA PNP Y OTRAS GERENCIAS, EN PRESUNTAS INFRACCIONES": 1353,
+    "EMISION DE ALERTAS TEMPRANAS EN APOYO A LA PNP EN PRESUNTAS FALTAS": 622,
+    "EMISION DE ALERTAS TEMPRANAS EN DESASTRES, INFRAESTRUCTURA, SERVICIOS Y ESPACIOS PÚBLICOS AFECTADOS Y EN RIESGO": 265,
+    "OPERATIVOS": 176,
+    "AYUDA Y APOYO A PERSONAS Y ENTIDADES": 113,
+    "EMISION DE ALERTAS TEMPRANAS EN APOYO A LA PNP, EN ACTIVIDADES PRESUNTAMENTE DELICTIVAS": 53,
+    "ACONTECIMIENTOS ESPECIALES": 10
+  },
+  "subtipo_n": 23,
+  "modalidad_n": 79,
+  "sector": {
+    "SECTOR I": 839,
+    "SECTOR II": 660,
+    "(nulo)": 543,
+    "SECTOR III": 452,
+    "SECTOR IV": 98
+  },
+  "zona": {
+    "SAN JUAN": 1060,
+    "PAMPLONA I": 870,
+    "(nulo)": 312,
+    "MATEO PUMACAHUA": 116,
+    "PAMPLONA II": 112,
+    "LADERAS DE VILLA": 102,
+    "SAGITARIO": 20
+  },
+  "canal_reporte": {
+    "CAMARAS CECOP": 1932,
+    "WHATSAPP": 322,
+    "LLAMDA TELEFONICA": 318,
+    "OTROS": 12,
+    "FISCALIZACION": 4,
+    "DESPACHADOR TETRA": 3,
+    "JEFE DE OPERACIONES": 1
+  },
+  "tipo_reportante": {
+    "AGENTE DE SEGURIDAD MUNICIPAL": 2018,
+    "CONTRIBUYENTE": 551,
+    "AGENTE DE SEGURIDAD EXTERNO": 17,
+    "FISCALIZACION": 2,
+    "FUNCIONARIO PUBLICO": 2,
+    "SERENO A PIE": 1,
+    "AUTORIDAD": 1
+  },
+  "estado_final": {
+    "No atendida": 2205,
+    "Atendida": 312,
+    "Justificada": 75
+  },
+  "nivel_fuente_no_canonico": {
+    "(vacío)": 1687,
+    "Común": 882,
+    "Relevante": 22,
+    "Grave": 1
+  },
+  "nivel_vacio_por_estado": {
+    "Atendida": {
+      "(vacío)": 0,
+      "Común": 297,
+      "Grave": 1,
+      "Relevante": 14
+    },
+    "Justificada": {
+      "(vacío)": 0,
+      "Común": 73,
+      "Grave": 0,
+      "Relevante": 2
+    },
+    "No atendida": {
+      "(vacío)": 1687,
+      "Común": 512,
+      "Grave": 0,
+      "Relevante": 6
+    }
+  },
+  "tiempo_respuesta_min": {
+    "count": 2592.0,
+    "mean": 1112.0,
+    "std": 570.8,
+    "min": 0.0,
+    "25%": 432.8,
+    "50%": 1441.0,
+    "75%": 1445.0,
+    "max": 2092.0
+  },
+  "no_atendida_con_cierre_mayor_23h": 1870,
+  "ubigeo_fuente": [
+    "150141"
+  ],
+  "limite": {
+    "ruta": "02_documentacion/01_recoleccion/datos/cartografia/limite_distrito.geojson",
+    "url": "https://geosnirh.ana.gob.pe/server/rest/services/Hosted/distritos/FeatureServer/0/query?where=ubigeo%3D%27150133%27&outFields=*&outSR=4326&f=geojson",
+    "area_km2_aprox": 22.33
+  },
+  "hallazgos_datos_personales": {
+    "posible_dni_8_digitos": 0,
+    "posible_telefono_9_digitos": 0,
+    "correo": 0,
+    "posible_placa": 0,
+    "tratamiento_persona": 0
+  },
+  "criterios_viabilidad": [
+    {
+      "criterio": "1. Georreferenciación a nivel de punto (lat/lon válidas)",
+      "umbral": ">= 90 % (deseable >= 98 %)",
+      "valor": "100.0 %",
+      "cumple": "True"
+    },
+    {
+      "criterio": "2. Fecha y hora (o turno) por registro",
+      "umbral": "100 %",
+      "valor": "100.0 % con fecha y hora; turno coherente con la hora en 2592/2592",
+      "cumple": true
+    },
+    {
+      "criterio": "3. Tipo/subtipo de incidencia",
+      "umbral": "presente (deseable: catálogo estable)",
+      "valor": "7 tipos, 23 subtipos, 79 modalidades; 5/7 tipos presentes en todas las semanas",
+      "cumple": true
+    },
+    {
+      "criterio": "4. Días consecutivos cubiertos",
+      "umbral": ">= 42 (deseable >= 90)",
+      "valor": "26 días (2026-05-16 a 2026-06-10)",
+      "cumple": false
+    },
+    {
+      "criterio": "5. Volumen",
+      "umbral": ">= 2 000 registros (deseable >= 50 por día)",
+      "valor": "2592 registros; 99.7 por día en promedio",
+      "cumple": true
+    },
+    {
+      "criterio": "6. Estabilidad de cobertura (registros/día por mes)",
+      "umbral": "sin cambios de nivel > 50 % sin explicar",
+      "valor": "2026-05: 83.7/día; 2026-06: 125.3/día; cambio entre meses [49.7] % (al límite); entre semanas completas [67.3, 119.3, 131.0] /día -> cambios [77.3, 9.8] %. Arranque 16–21 may con 32.0/día (probable puesta en marcha del sistema, no confirmada por la fuente) y último día censurado por el filtro de incidencias cerradas",
+      "cumple": false
+    },
+    {
+      "criterio": "7. Licencia abierta y fuente oficial identificable",
+      "umbral": "sí",
+      "valor": "ODC-By 1.0; MDSJM – Gerencia de Seguridad Ciudadana (PNDA)",
+      "cumple": true
+    },
+    {
+      "criterio": "8. Puntos dentro del límite distrital",
+      "umbral": ">= 90 % (deseable >= 98 %)",
+      "valor": "98.77 % (2560/2592) dentro del límite INEI 150133",
+      "cumple": "True"
+    },
+    {
+      "criterio": "9. Sin datos personales o eliminables",
+      "umbral": "sí",
+      "valor": "Fuente anonimizada (sin nombres ni descripción libre); DIRECCION es dirección de vía/lote. Barrido de patrones en direccion: {'posible_dni_8_digitos': 0, 'posible_telefono_9_digitos': 0, 'correo': 0, 'posible_placa': 0, 'tratamiento_persona': 0}",
+      "cumple": true
+    }
+  ]
+}

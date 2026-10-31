@@ -1,0 +1,271 @@
+{
+  "version": 1,
+  "generado": "2026-10-31T08:15:59-05:00",
+  "dataset_limpio": {
+    "ruta": "02_documentacion/02_analisis/datos/incidencias_limpias.csv",
+    "registros": 2580,
+    "reglas_limpieza": "02_documentacion/02_analisis/reglas_limpieza.md"
+  },
+  "microzona": {
+    "metodo": "grilla",
+    "tamano_m": 500,
+    "resolucion_h3": null,
+    "crs_metrico": "EPSG:32718",
+    "origen_grilla": [
+      283500.0,
+      8651000.0
+    ],
+    "criterio_activa": "Celda de 500 m (EPSG:32718, origen [283500.0, 8651000.0]) que interseca el límite INEI 150133 y tiene ≥1 incidencia limpia (dentro del límite o a ≤150 m) registrada en entrenamiento (2026-05-22 a 2026-05-31)",
+    "n_microzonas_activas": 86,
+    "ruta_geojson": "02_documentacion/02_analisis/datos/microzonas.geojson",
+    "alternativas_evaluadas": [
+      {
+        "tamano_m": 300,
+        "pct_ceros": 84.7,
+        "n_activas": 176,
+        "comentario": "Descartada: poca señal para tres niveles (Alto 3,6 % en entrenamiento); 176 celdas activas, fuera del rango 30–150"
+      },
+      {
+        "tamano_m": 500,
+        "pct_ceros": 72.4,
+        "n_activas": 86,
+        "comentario": "Elegida: cumple los cuatro criterios"
+      },
+      {
+        "tamano_m": 750,
+        "pct_ceros": 58.1,
+        "n_activas": 45,
+        "comentario": "Descartada: celda demasiado grande para orientar patrullaje (0,56 km²)"
+      },
+      {
+        "tamano_m": 1000,
+        "pct_ceros": 50.8,
+        "n_activas": 30,
+        "comentario": "Descartada: celda demasiado grande para orientar patrullaje (1,00 km²)"
+      }
+    ]
+  },
+  "unidad_modelado": "microzona x fecha x turno",
+  "tabla_modelado": {
+    "ruta": "02_documentacion/02_analisis/datos/tabla_modelado.csv",
+    "filas": 4644,
+    "incluye_ceros": true
+  },
+  "objetivo": {
+    "nombre": "nivel",
+    "clases": [
+      "Bajo",
+      "Medio",
+      "Alto"
+    ],
+    "regla": "conteo = nº de incidencias limpias registradas en la microzona activa, fecha y turno. b = mediana de los conteos > 0 de entrenamiento = 1. Bajo si conteo = 0; Medio si 1 <= conteo <= 1; Alto si conteo > 1.",
+    "umbrales": {
+      "Bajo": "conteo <= 0",
+      "Medio": "0 < conteo <= 1",
+      "Alto": "conteo > 1"
+    },
+    "calculado_sobre": "entrenamiento",
+    "distribucion_por_particion": {
+      "train": {
+        "Bajo": 1858,
+        "Medio": 480,
+        "Alto": 242
+      },
+      "valid": {
+        "Bajo": 756,
+        "Medio": 172,
+        "Alto": 104
+      },
+      "test": {
+        "Bajo": 686,
+        "Medio": 204,
+        "Alto": 142
+      }
+    }
+  },
+  "features": [
+    {
+      "nombre": "lag1_turno",
+      "descripcion": "Incidencias en la microzona, mismo turno, día d−1",
+      "ventana": "d−1",
+      "tipo": "historial",
+      "sin_fuga_porque": "Usa solo incidencias registradas antes de la fecha objetivo (ventana termina en d−1)."
+    },
+    {
+      "nombre": "lag7_turno",
+      "descripcion": "Incidencias en la microzona, mismo turno, día d−7 (vacío si d−7 < 16 may: solo el 22 may)",
+      "ventana": "d−7",
+      "tipo": "historial",
+      "sin_fuga_porque": "Usa solo incidencias registradas antes de la fecha objetivo (ventana termina en d−1)."
+    },
+    {
+      "nombre": "suma3_turno",
+      "descripcion": "Suma en la microzona, mismo turno, días d−3 a d−1",
+      "ventana": "d−3…d−1",
+      "tipo": "historial",
+      "sin_fuga_porque": "Usa solo incidencias registradas antes de la fecha objetivo (ventana termina en d−1)."
+    },
+    {
+      "nombre": "media7_turno",
+      "descripcion": "Media diaria en la microzona, mismo turno, días d−7 a d−1 (días disponibles desde el 16 may)",
+      "ventana": "d−7…d−1",
+      "tipo": "historial",
+      "sin_fuga_porque": "Usa solo incidencias registradas antes de la fecha objetivo (ventana termina en d−1)."
+    },
+    {
+      "nombre": "lag1_celda",
+      "descripcion": "Incidencias en la microzona, todos los turnos, día d−1",
+      "ventana": "d−1",
+      "tipo": "historial",
+      "sin_fuga_porque": "Usa solo incidencias registradas antes de la fecha objetivo (ventana termina en d−1)."
+    },
+    {
+      "nombre": "suma7_celda",
+      "descripcion": "Suma en la microzona, todos los turnos, días d−7 a d−1",
+      "ventana": "d−7…d−1",
+      "tipo": "historial",
+      "sin_fuga_porque": "Usa solo incidencias registradas antes de la fecha objetivo (ventana termina en d−1)."
+    },
+    {
+      "nombre": "dias_desde_ultima",
+      "descripcion": "Días desde el último día con registro en la microzona (tope 14)",
+      "ventana": "16 may…d−1",
+      "tipo": "historial",
+      "sin_fuga_porque": "Usa solo incidencias registradas antes de la fecha objetivo (ventana termina en d−1)."
+    },
+    {
+      "nombre": "gravedad_media7_celda",
+      "descripcion": "Gravedad media G (1–5) de las incidencias de la microzona en d−7 a d−1 (0 si no hubo)",
+      "ventana": "d−7…d−1",
+      "tipo": "historial",
+      "sin_fuga_porque": "Usa solo incidencias registradas antes de la fecha objetivo (ventana termina en d−1)."
+    },
+    {
+      "nombre": "nivel_lag1_turno",
+      "descripcion": "Nivel (Bajo/Medio/Alto) de lag1_turno con el umbral b de entrenamiento",
+      "ventana": "d−1",
+      "tipo": "historial",
+      "sin_fuga_porque": "Usa solo incidencias registradas antes de la fecha objetivo (ventana termina en d−1). El umbral b se fija con entrenamiento."
+    },
+    {
+      "nombre": "vecinos_lag1_turno",
+      "descripcion": "Incidencias en las 8 celdas vecinas, mismo turno, día d−1",
+      "ventana": "d−1",
+      "tipo": "espacial",
+      "sin_fuga_porque": "Agrega celdas vecinas con la misma ventana rezagada (termina en d−1); no usa el periodo objetivo."
+    },
+    {
+      "nombre": "vecinos_suma7",
+      "descripcion": "Suma en las 8 celdas vecinas, todos los turnos, días d−7 a d−1",
+      "ventana": "d−7…d−1",
+      "tipo": "espacial",
+      "sin_fuga_porque": "Agrega celdas vecinas con la misma ventana rezagada (termina en d−1); no usa el periodo objetivo."
+    },
+    {
+      "nombre": "dia_semana",
+      "descripcion": "Día de la semana de d (0 = lunes)",
+      "ventana": "d (calendario)",
+      "tipo": "calendario",
+      "sin_fuga_porque": "Se conoce de antemano para cualquier fecha futura; no depende de incidencias."
+    },
+    {
+      "nombre": "fin_de_semana",
+      "descripcion": "1 si d es sábado o domingo",
+      "ventana": "d (calendario)",
+      "tipo": "calendario",
+      "sin_fuga_porque": "Se conoce de antemano para cualquier fecha futura; no depende de incidencias."
+    },
+    {
+      "nombre": "feriado",
+      "descripcion": "1 si d es feriado nacional (7 jun, Ley N.° 31788)",
+      "ventana": "d (calendario)",
+      "tipo": "calendario",
+      "sin_fuga_porque": "Se conoce de antemano para cualquier fecha futura; no depende de incidencias."
+    },
+    {
+      "nombre": "turno",
+      "descripcion": "Turno objetivo (Mañana, Tarde, Noche)",
+      "ventana": "d (calendario)",
+      "tipo": "calendario",
+      "sin_fuga_porque": "Se conoce de antemano para cualquier fecha futura; no depende de incidencias."
+    },
+    {
+      "nombre": "distrito_lag1_turno",
+      "descripcion": "Incidencias en todo el distrito, mismo turno, día d−1",
+      "ventana": "d−1",
+      "tipo": "contexto",
+      "sin_fuga_porque": "Total del distrito con ventana que termina en d−1; capta el cambio de cobertura sin mirar el periodo objetivo."
+    },
+    {
+      "nombre": "distrito_lag1",
+      "descripcion": "Incidencias en todo el distrito, día d−1",
+      "ventana": "d−1",
+      "tipo": "contexto",
+      "sin_fuga_porque": "Total del distrito con ventana que termina en d−1; capta el cambio de cobertura sin mirar el periodo objetivo."
+    },
+    {
+      "nombre": "distrito_media7",
+      "descripcion": "Media diaria de incidencias del distrito en d−7 a d−1 (nivel de cobertura reciente)",
+      "ventana": "d−7…d−1",
+      "tipo": "contexto",
+      "sin_fuga_porque": "Total del distrito con ventana que termina en d−1; capta el cambio de cobertura sin mirar el periodo objetivo."
+    }
+  ],
+  "excluidas_por_fuga": [
+    "estado_final",
+    "fecha_hora_cierre",
+    "tiempo_respuesta_min",
+    "NIVEL",
+    "conteo",
+    "nivel"
+  ],
+  "particion_temporal": {
+    "train": [
+      "2026-05-22",
+      "2026-05-31"
+    ],
+    "valid": [
+      "2026-06-01",
+      "2026-06-04"
+    ],
+    "test": [
+      "2026-06-05",
+      "2026-06-08"
+    ]
+  },
+  "gravedad": {
+    "ruta_tabla": "02_documentacion/02_analisis/datos/gravedad_por_tipo.csv",
+    "metodo": "Supuesto de diseño: escala ordinal 1–5 por tipo (5 presuntamente delictivas, 4 presuntas faltas, 3 presuntas infracciones, 2 infraestructura y riesgo, 1 operativos / ayuda y apoyo / acontecimientos especiales); G_norm = (G-1)/4. No usa la columna NIVEL de la fuente ([POST])."
+  },
+  "linea_base": {
+    "metodo": "persistencia",
+    "macro_f1_valid": 0.439
+  },
+  "hipotesis": {
+    "HE2": {
+      "resultado": "se_sostiene",
+      "evidencia": "Grilla 500 m, 22 may–4 jun (1 602 registros, 121 celdas que intersecan el distrito): el 14,0 % de las celdas acumula el 50 % de los registros y el 33,1 % el 80 %; Gini 0,63. Se mantiene con 300 y 750 m y por separado en entrenamiento y validación; Spearman entre ambos 0,82. Sin cámaras: Gini 0,60. Concentración del registro del CCO, no del delito; exploratorio."
+    }
+  },
+  "recomendaciones_modelado": [
+    "Ajustar los modelos solo con train; elegir hiperparámetros y modelo por Macro F1 en valid; evaluar una sola vez en test (opcionalmente reentrenando con train+valid antes de esa única evaluación, declarándolo).",
+    "Usar class_weight='balanced' (o ponderación equivalente) por el desbalance (Bajo ≈ 72 % en train) y reportar precisión y recall por clase además de Macro F1.",
+    "Comparar siempre contra la persistencia (nivel_lag1_turno) y contra 'siempre Bajo'; con pocas filas Alto, reportar Macro F1 por día y por turno y un intervalo bootstrap por fecha.",
+    "lag7_turno está vacío solo para el 2026-05-22 (258 filas): imputar con media7_turno o descartar esa fecha del ajuste; la regresión logística requiere imputación y escalado ajustados en train.",
+    "feriado es constante en train y valid (el único feriado cae en test): no aporta aprendizaje; puede excluirse sin pérdida.",
+    "Las variables de contexto (distrito_lag1, distrito_media7) existen para absorber el cambio de cobertura; vigilar su importancia y su estabilidad entre particiones.",
+    "Para el ranking P = w1·R + w2·G + w3·F: R = probabilidad o nivel estimado, G = gravedad_media7_celda normalizada (G-1)/4, F = suma7_celda normalizada con el máximo de train.",
+    "Reconstruir microzonas y tabla con _comun.py y _features.py (notebooks/) o según especificacion_modelado.md; verificar filas = 86 × 18 × 3 = 4644."
+  ],
+  "advertencias": [
+    "Periodo muy corto (18 días utilizables; 10/4/4): los resultados de la Fase 3 son exploratorios y de alta varianza.",
+    "Arranque 16–21 may excluido como objetivo (≈32,0 registros/día y sin turno Noche hasta el 20 may); solo alimenta rezagos, que quedan subestimados en las primeras fechas de entrenamiento.",
+    "9 y 10 jun excluidos por censura a la derecha (solo incidencias cerradas al corte ≈ 10 jun 15:09; 0 registros el 9 jun entre 22:00 y 23:59).",
+    "Cambio de cobertura: +32,7 % entre 22–28 may y 29 may–4 jun, 88 % atribuible a cámaras; la proporción de Alto sube de train (9,4 %) a valid (10,1 %) y test (13,8 %, solo conteo): riesgo de desplazamiento de distribución.",
+    "Validación sin fin de semana; prueba con sábado, domingo y el feriado del 7 jun.",
+    "Sesgo de registro: ~3/4 de los registros vienen de cámaras CECOP; el objetivo mide registro del CCO, no delito. No etiquetar microzonas como 'peligrosas'.",
+    "12 registros excluidos por coordenadas a >150 m del límite (2 errores groseros); 20 puntos de borde (≤113 m) se conservan.",
+    "No usar NIVEL de la fuente, estado_final, fecha_hora_cierre ni tiempo_respuesta_min: son posteriores al evento.",
+    "Las incidencias en celdas no activas (21 registros estables fuera de las 86 microzonas) no entran a la tabla de modelado."
+  ]
+}

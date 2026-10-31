@@ -1,0 +1,346 @@
+{
+  "persistencia": {
+    "valid": {
+      "por_dia": {
+        "2026-06-01": 0.3367,
+        "2026-06-02": 0.4969,
+        "2026-06-03": 0.4693,
+        "2026-06-04": 0.4666
+      },
+      "por_turno": {
+        "Mañana": 0.4596,
+        "Tarde": 0.3944,
+        "Noche": 0.431
+      },
+      "bootstrap": {
+        "metodo": "bootstrap percentil, 2000 réplicas, confianza 95%",
+        "global_por_bloques_de_dia": {
+          "ic_inf": 0.3663,
+          "ic_sup": 0.49
+        },
+        "por_dia_filas": {
+          "2026-06-01": {
+            "macro_f1": 0.3367,
+            "ic_inf": 0.2792,
+            "ic_sup": 0.3937
+          },
+          "2026-06-02": {
+            "macro_f1": 0.4969,
+            "ic_inf": 0.4224,
+            "ic_sup": 0.569
+          },
+          "2026-06-03": {
+            "macro_f1": 0.4693,
+            "ic_inf": 0.3943,
+            "ic_sup": 0.5463
+          },
+          "2026-06-04": {
+            "macro_f1": 0.4666,
+            "ic_inf": 0.3847,
+            "ic_sup": 0.5421
+          }
+        }
+      }
+    },
+    "test": {
+      "por_dia": {
+        "2026-06-05": 0.4616,
+        "2026-06-06": 0.4282,
+        "2026-06-07": 0.4102,
+        "2026-06-08": 0.4212
+      },
+      "por_turno": {
+        "Mañana": 0.4619,
+        "Tarde": 0.3676,
+        "Noche": 0.4482
+      },
+      "bootstrap": {
+        "metodo": "bootstrap percentil, 2000 réplicas, confianza 95%",
+        "global_por_bloques_de_dia": {
+          "ic_inf": 0.4158,
+          "ic_sup": 0.4521
+        },
+        "por_dia_filas": {
+          "2026-06-05": {
+            "macro_f1": 0.4616,
+            "ic_inf": 0.39,
+            "ic_sup": 0.5304
+          },
+          "2026-06-06": {
+            "macro_f1": 0.4282,
+            "ic_inf": 0.3626,
+            "ic_sup": 0.4928
+          },
+          "2026-06-07": {
+            "macro_f1": 0.4102,
+            "ic_inf": 0.3435,
+            "ic_sup": 0.4785
+          },
+          "2026-06-08": {
+            "macro_f1": 0.4212,
+            "ic_inf": 0.3566,
+            "ic_sup": 0.4834
+          }
+        }
+      }
+    }
+  },
+  "regresion_logistica": {
+    "valid": {
+      "por_dia": {
+        "2026-06-01": 0.4688,
+        "2026-06-02": 0.4671,
+        "2026-06-03": 0.5014,
+        "2026-06-04": 0.4754
+      },
+      "por_turno": {
+        "Mañana": 0.4741,
+        "Tarde": 0.4148,
+        "Noche": 0.4982
+      },
+      "bootstrap": {
+        "metodo": "bootstrap percentil, 2000 réplicas, confianza 95%",
+        "global_por_bloques_de_dia": {
+          "ic_inf": 0.468,
+          "ic_sup": 0.4935
+        },
+        "por_dia_filas": {
+          "2026-06-01": {
+            "macro_f1": 0.4688,
+            "ic_inf": 0.3952,
+            "ic_sup": 0.5364
+          },
+          "2026-06-02": {
+            "macro_f1": 0.4671,
+            "ic_inf": 0.4005,
+            "ic_sup": 0.5317
+          },
+          "2026-06-03": {
+            "macro_f1": 0.5014,
+            "ic_inf": 0.415,
+            "ic_sup": 0.5839
+          },
+          "2026-06-04": {
+            "macro_f1": 0.4754,
+            "ic_inf": 0.3954,
+            "ic_sup": 0.5494
+          }
+        }
+      }
+    },
+    "test": {
+      "por_dia": {
+        "2026-06-05": 0.4589,
+        "2026-06-06": 0.3986,
+        "2026-06-07": 0.4429,
+        "2026-06-08": 0.4117
+      },
+      "por_turno": {
+        "Mañana": 0.4151,
+        "Tarde": 0.3766,
+        "Noche": 0.4541
+      },
+      "bootstrap": {
+        "metodo": "bootstrap percentil, 2000 réplicas, confianza 95%",
+        "global_por_bloques_de_dia": {
+          "ic_inf": 0.4057,
+          "ic_sup": 0.4561
+        },
+        "por_dia_filas": {
+          "2026-06-05": {
+            "macro_f1": 0.4589,
+            "ic_inf": 0.3928,
+            "ic_sup": 0.521
+          },
+          "2026-06-06": {
+            "macro_f1": 0.3986,
+            "ic_inf": 0.333,
+            "ic_sup": 0.4628
+          },
+          "2026-06-07": {
+            "macro_f1": 0.4429,
+            "ic_inf": 0.3798,
+            "ic_sup": 0.5047
+          },
+          "2026-06-08": {
+            "macro_f1": 0.4117,
+            "ic_inf": 0.3481,
+            "ic_sup": 0.4769
+          }
+        }
+      }
+    }
+  },
+  "random_forest": {
+    "valid": {
+      "por_dia": {
+        "2026-06-01": 0.4357,
+        "2026-06-02": 0.5103,
+        "2026-06-03": 0.4845,
+        "2026-06-04": 0.4626
+      },
+      "por_turno": {
+        "Mañana": 0.4931,
+        "Tarde": 0.3757,
+        "Noche": 0.4704
+      },
+      "bootstrap": {
+        "metodo": "bootstrap percentil, 2000 réplicas, confianza 95%",
+        "global_por_bloques_de_dia": {
+          "ic_inf": 0.4475,
+          "ic_sup": 0.5035
+        },
+        "por_dia_filas": {
+          "2026-06-01": {
+            "macro_f1": 0.4357,
+            "ic_inf": 0.3624,
+            "ic_sup": 0.5014
+          },
+          "2026-06-02": {
+            "macro_f1": 0.5103,
+            "ic_inf": 0.4377,
+            "ic_sup": 0.5811
+          },
+          "2026-06-03": {
+            "macro_f1": 0.4845,
+            "ic_inf": 0.4054,
+            "ic_sup": 0.5635
+          },
+          "2026-06-04": {
+            "macro_f1": 0.4626,
+            "ic_inf": 0.3784,
+            "ic_sup": 0.5359
+          }
+        }
+      }
+    },
+    "test": {
+      "por_dia": {
+        "2026-06-05": 0.4586,
+        "2026-06-06": 0.4382,
+        "2026-06-07": 0.4703,
+        "2026-06-08": 0.4085
+      },
+      "por_turno": {
+        "Mañana": 0.4622,
+        "Tarde": 0.3803,
+        "Noche": 0.4596
+      },
+      "bootstrap": {
+        "metodo": "bootstrap percentil, 2000 réplicas, confianza 95%",
+        "global_por_bloques_de_dia": {
+          "ic_inf": 0.4225,
+          "ic_sup": 0.4659
+        },
+        "por_dia_filas": {
+          "2026-06-05": {
+            "macro_f1": 0.4586,
+            "ic_inf": 0.386,
+            "ic_sup": 0.5275
+          },
+          "2026-06-06": {
+            "macro_f1": 0.4382,
+            "ic_inf": 0.3686,
+            "ic_sup": 0.507
+          },
+          "2026-06-07": {
+            "macro_f1": 0.4703,
+            "ic_inf": 0.4055,
+            "ic_sup": 0.5384
+          },
+          "2026-06-08": {
+            "macro_f1": 0.4085,
+            "ic_inf": 0.3433,
+            "ic_sup": 0.4744
+          }
+        }
+      }
+    }
+  },
+  "gradient_boosting": {
+    "valid": {
+      "por_dia": {
+        "2026-06-01": 0.4192,
+        "2026-06-02": 0.4928,
+        "2026-06-03": 0.4809,
+        "2026-06-04": 0.4924
+      },
+      "por_turno": {
+        "Mañana": 0.4544,
+        "Tarde": 0.3631,
+        "Noche": 0.4657
+      },
+      "bootstrap": {
+        "metodo": "bootstrap percentil, 2000 réplicas, confianza 95%",
+        "global_por_bloques_de_dia": {
+          "ic_inf": 0.4384,
+          "ic_sup": 0.4937
+        },
+        "por_dia_filas": {
+          "2026-06-01": {
+            "macro_f1": 0.4192,
+            "ic_inf": 0.3497,
+            "ic_sup": 0.4889
+          },
+          "2026-06-02": {
+            "macro_f1": 0.4928,
+            "ic_inf": 0.4138,
+            "ic_sup": 0.5634
+          },
+          "2026-06-03": {
+            "macro_f1": 0.4809,
+            "ic_inf": 0.403,
+            "ic_sup": 0.5561
+          },
+          "2026-06-04": {
+            "macro_f1": 0.4924,
+            "ic_inf": 0.412,
+            "ic_sup": 0.5677
+          }
+        }
+      }
+    },
+    "test": {
+      "por_dia": {
+        "2026-06-05": 0.4525,
+        "2026-06-06": 0.4141,
+        "2026-06-07": 0.4744,
+        "2026-06-08": 0.4146
+      },
+      "por_turno": {
+        "Mañana": 0.4554,
+        "Tarde": 0.3449,
+        "Noche": 0.4334
+      },
+      "bootstrap": {
+        "metodo": "bootstrap percentil, 2000 réplicas, confianza 95%",
+        "global_por_bloques_de_dia": {
+          "ic_inf": 0.4157,
+          "ic_sup": 0.4652
+        },
+        "por_dia_filas": {
+          "2026-06-05": {
+            "macro_f1": 0.4525,
+            "ic_inf": 0.3789,
+            "ic_sup": 0.5195
+          },
+          "2026-06-06": {
+            "macro_f1": 0.4141,
+            "ic_inf": 0.3464,
+            "ic_sup": 0.4822
+          },
+          "2026-06-07": {
+            "macro_f1": 0.4744,
+            "ic_inf": 0.4042,
+            "ic_sup": 0.5415
+          },
+          "2026-06-08": {
+            "macro_f1": 0.4146,
+            "ic_inf": 0.3507,
+            "ic_sup": 0.4829
+          }
+        }
+      }
+    }
+  }
+}

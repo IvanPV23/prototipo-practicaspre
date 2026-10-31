@@ -1,0 +1,13 @@
+# ADR 0003 — Microzona, objetivo y variables tomados de la Fase 2; fecha operativa
+
+- **Estado:** aceptada (2026-10-31)
+- **Contexto:** la Fase 2 (`handoff_fase2.json`, `especificacion_modelado.md`) fija la unidad de modelado y su construcción. El sistema debe reconstruirla **desde el CSV canónico**, sin depender de los CSV intermedios.
+- **Decisión (se implementa tal cual):**
+  - Grilla de 500 m en EPSG:32718 con origen (283 500, 8 651 000). Hay 121 celdas que intersecan el límite INEI 150133, y son **activas** las 86 que tienen al menos una incidencia limpia en entrenamiento (22–31 may). Ids `MZ-0001…` ordenados por fila descendente y columna ascendente.
+  - Limpieza: se excluyen los puntos a más de 150 m del límite (12) y quedan 2 580 incidencias limpias. Del 16 al 21 de mayo es arranque (solo historial). El 9 y el 10 de junio están censurados (no son historia ni objetivo).
+  - Objetivo: `conteo` de incidencias por microzona, fecha y turno. Con b = 1 (mediana de los conteos > 0 de entrenamiento): **Bajo = 0, Medio = 1, Alto ≥ 2**.
+  - Las 18 variables del handoff se calculan solo con fechas anteriores a d, sobre las 4 644 filas (86 × 18 × 3). La reconstrucción coincide **fila a fila** con `tabla_modelado.csv` de la Fase 2 (test `test_tabla_modelado.py`). Los conteos de control también coinciden: 2 580 limpias, 86 activas, 4 644 filas, clases por partición 1858/480/242, 756/172/104 y 686/204/142 (Bajo/Medio/Alto), y persistencia en validación con Macro F1 0,439.
+  - **`lag7_turno`** es nulo solo el 22 de mayo (258 filas). Se imputa fila a fila con `media7_turno` de la misma fila. Esa variable también usa solo días previos, y la imputación no usa estadísticos de otras filas, así que no introduce fuga.
+  - **`feriado`** vale 0 en todo train y valid (el único feriado, el 7 de junio, cae en prueba). Ningún estimador puede aprender de una columna constante, así que se conserva en la tabla y en la BD, pero **no entra al estimador** (`features.excluidas_modelo`). El modelo usa 17 variables.
+  - **Fecha operativa.** Como el 9 y el 10 de junio están censurados, la vista operativa planifica el **9 jun 2026** (día siguiente al último día completo, el 8 de junio) con historia hasta el 8 de junio. Esas 258 filas se guardan con `particion = 'operativa'` y objetivo nulo. Las cuatro fechas de prueba (5–8 jun) se publican como **demostración**, porque para ellas existe lo observado y la ficha puede compararlo. El selector de la interfaz solo ofrece estas cinco fechas, que son las que tienen predicciones.
+- **Consecuencias:** en una operación real, las variables del día d deberían calcularse con el registro interno del CCO (incluidas las incidencias abiertas) y no con el dataset abierto, que solo publica las cerradas.

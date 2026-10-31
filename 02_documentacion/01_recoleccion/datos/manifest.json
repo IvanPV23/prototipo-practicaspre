@@ -1,0 +1,186 @@
+{
+  "generado": "2026-10-31T07:44:18-05:00",
+  "descripcion": "Archivos crudos de la Fase 1 con URL de origen, fecha de descarga, SHA-256 y tamaño en bytes.",
+  "archivos": [
+    {
+      "id_fuente": "alcance_xlsx",
+      "archivo": "incidencias_seguridad_sjm_20260610.xlsx",
+      "ruta": "01_alcance/incidencias_seguridad_sjm_20260610.xlsx",
+      "url": "local: 01_alcance (copia en Excel del CSV del PNDA, entregada con el alcance)",
+      "fecha_descarga": null,
+      "sha256": "0db34d45268424bf78a97b008c34ebc9b74858a08a9df43b820f857b6254bf03",
+      "bytes": 481994,
+      "error": null
+    },
+    {
+      "id_fuente": "cand_callao_mpc",
+      "archivo": "REGISTRO_TOTAL_INCIDENCIAS_CAMARAS_CALLAO_MPC.csv",
+      "ruta": "02_documentacion/01_recoleccion/datos/raw/cand_callao_mpc/2026-10-31/REGISTRO_TOTAL_INCIDENCIAS_CAMARAS_CALLAO_MPC.csv",
+      "url": "https://www.datosabiertos.gob.pe/sites/default/files/REGISTRO%20TOTAL%20DE%20INCIDENCIAS%20OBSERVADAS%20MEDIANTE%20LA%20CENTRAL%20DE%20MONITOREO%20DE%20C%C3%81MARAS%20Y%20VIDEOVIGILANCIA%20CALLAO-MPC.csv",
+      "fecha_descarga": "2026-10-31",
+      "sha256": "98e83e4d593009c8391b13bd881c5c5e18c7d98389a76db8a91fa0c719f7d8c9",
+      "bytes": 168713960,
+      "error": null
+    },
+    {
+      "id_fuente": "cand_callao_mpc",
+      "archivo": "limite_070101_callao.geojson",
+      "ruta": "02_documentacion/01_recoleccion/datos/raw/cand_callao_mpc/2026-10-31/limite_070101_callao.geojson",
+      "url": "https://geosnirh.ana.gob.pe/server/rest/services/Hosted/distritos/FeatureServer/0/query?where=ubigeo%3D%27070101%27&outFields=*&outSR=4326&f=geojson",
+      "fecha_descarga": "2026-10-31",
+      "sha256": "6f26e2daa07076d304dfcaeaf19bba42ff77dbe0bdc9a802de3e57bbb22b6968",
+      "bytes": 77860,
+      "error": null
+    },
+    {
+      "id_fuente": "cand_gore_callao",
+      "archivo": "DATASET_SEGURIDAD_CALLAO_FEBRERO2024_0.csv",
+      "ruta": "02_documentacion/01_recoleccion/datos/raw/cand_gore_callao/2026-10-31/DATASET_SEGURIDAD_CALLAO_FEBRERO2024_0.csv",
+      "url": "https://www.datosabiertos.gob.pe/sites/default/files/DATASET_SEGURIDAD_CALLAO_FEBRERO2024_0.csv",
+      "fecha_descarga": "2026-10-31",
+      "sha256": "bfe6b503419f92d3cad4f8bee2f083fee6afdc91e6f5566f0df559f8b54bd80b",
+      "bytes": 1089243,
+      "error": null
+    },
+    {
+      "id_fuente": "cand_jesus_maria",
+      "archivo": "dataset_vf_5.csv",
+      "ruta": "02_documentacion/01_recoleccion/datos/raw/cand_jesus_maria/2026-10-31/dataset_vf_5.csv",
+      "url": "https://www.datosabiertos.gob.pe/sites/default/files/dataset_vf_5.csv",
+      "fecha_descarga": "2026-10-31",
+      "sha256": "b443cecc697d93df225708941713582e1eca4648d1d5d2845ec455b80b8e6931",
+      "bytes": 50962,
+      "error": null
+    },
+    {
+      "id_fuente": "cand_miraflores",
+      "archivo": "4_Atencion_de_emergencia_II_2021.xlsx",
+      "ruta": "02_documentacion/01_recoleccion/datos/raw/cand_miraflores/2026-10-31/4_Atencion_de_emergencia_II_2021.xlsx",
+      "url": "https://www.datosabiertos.gob.pe/sites/default/files/4_Atencion_de_emergencia_II_2021.xlsx",
+      "fecha_descarga": "2026-10-31",
+      "sha256": "26599b1d5ab4cb659ca7ee3a4026143e192d2ec2ecfc07fa15fd38424a7021e4",
+      "bytes": 9968,
+      "error": null
+    },
+    {
+      "id_fuente": "cand_san_isidro_2026",
+      "archivo": "SC-APOYO_POR_SEGURIDAD_2026.xls",
+      "ruta": "02_documentacion/01_recoleccion/datos/raw/cand_san_isidro_2026/2026-10-31/SC-APOYO_POR_SEGURIDAD_2026.xls",
+      "url": "https://www.datosabiertos.gob.pe/sites/default/files/SC-APOYO%20POR%20SEGURIDAD%202026.xls",
+      "fecha_descarga": "2026-10-31",
+      "sha256": "c3568dd3cb82e43503163aabb196c67e2a3170fa38614815dbe3d8cab910c915",
+      "bytes": 5576704,
+      "error": null
+    },
+    {
+      "id_fuente": "cand_smp_2026",
+      "archivo": "DATA_BASE_INCIDENCIAS_1ER_SEMESTRE.xlsx",
+      "ruta": "02_documentacion/01_recoleccion/datos/raw/cand_smp_2026/2026-10-31/DATA_BASE_INCIDENCIAS_1ER_SEMESTRE.xlsx",
+      "url": "https://www.datosabiertos.gob.pe/sites/default/files/DATA%20BASE%20INCIDENCIAS%201ER%20SEMESTRE.xlsx",
+      "fecha_descarga": "2026-10-31",
+      "sha256": "74e400050f3889a67e1c24dca487d4ce9a930bac2d8258dbfcb57f687f343054",
+      "bytes": 2747544,
+      "error": null
+    },
+    {
+      "id_fuente": "cco_mdsjm_2026",
+      "archivo": "DICCIONARIO-DATOS_20260610_151901.xlsx",
+      "ruta": "02_documentacion/01_recoleccion/datos/raw/cco_mdsjm_2026/2026-10-31/DICCIONARIO-DATOS_20260610_151901.xlsx",
+      "url": "https://www.datosabiertos.gob.pe/sites/default/files/DICCIONARIO-DATOS_20260610_151901.xlsx",
+      "fecha_descarga": "2026-10-31",
+      "sha256": "78eb81393cbfccb3620aca2b41cd2024724f8f9faa32a62ea6752e02801b8717",
+      "bytes": 8444,
+      "error": null
+    },
+    {
+      "id_fuente": "cco_mdsjm_2026",
+      "archivo": "METADATOS_20260610.docx",
+      "ruta": "02_documentacion/01_recoleccion/datos/raw/cco_mdsjm_2026/2026-10-31/METADATOS_20260610.docx",
+      "url": "https://www.datosabiertos.gob.pe/sites/default/files/METADATOS_20260610.docx",
+      "fecha_descarga": "2026-10-31",
+      "sha256": "3c685fd806ed361ff2716be7167bc79b91db4a611f9d047538bf366e3efd091e",
+      "bytes": 2582,
+      "error": null
+    },
+    {
+      "id_fuente": "cco_mdsjm_2026",
+      "archivo": "ficha_package_show.json",
+      "ruta": "02_documentacion/01_recoleccion/datos/raw/cco_mdsjm_2026/2026-10-31/ficha_package_show.json",
+      "url": "https://www.datosabiertos.gob.pe/api/3/action/package_show?id=af9dff57-53a2-4ee0-b7c3-d7787505207d",
+      "fecha_descarga": "2026-10-31",
+      "sha256": "d43fdf95d2ae80c23f475e1f285a3ea70e8566b38fb8a4b0a4d5b65c4786652b",
+      "bytes": 6955,
+      "error": null
+    },
+    {
+      "id_fuente": "cco_mdsjm_2026",
+      "archivo": "incidencias_seguridad_sjm_20260610.csv",
+      "ruta": "02_documentacion/01_recoleccion/datos/raw/cco_mdsjm_2026/2026-10-31/incidencias_seguridad_sjm_20260610.csv",
+      "url": "https://www.datosabiertos.gob.pe/sites/default/files/incidencias_seguridad_sjm_20260610.csv",
+      "fecha_descarga": "2026-10-31",
+      "sha256": "dcfcea3586ab5911a4216d9d7348b87711cc399a9d18125655880c7e4a38e7a1",
+      "bytes": 1095602,
+      "error": null
+    },
+    {
+      "id_fuente": "limite_inei_ana",
+      "archivo": "distritos_lima_atributos.json",
+      "ruta": "02_documentacion/01_recoleccion/datos/raw/limite_inei_ana/2026-10-31/distritos_lima_atributos.json",
+      "url": "https://geosnirh.ana.gob.pe/server/rest/services/Hosted/distritos/FeatureServer/0/query?where=provincia%3D%27LIMA%27&outFields=ubigeo,distrito,provincia,capital,fuente&returnGeometry=false&f=json",
+      "fecha_descarga": "2026-10-31",
+      "sha256": "49218a14d0c6aa95fa50cce8530080d2fefafb53cf651e3c2bc86ffb9efe3629",
+      "bytes": 5258,
+      "error": null
+    },
+    {
+      "id_fuente": "limite_inei_ana",
+      "archivo": "limite_150133_sjm.geojson",
+      "ruta": "02_documentacion/01_recoleccion/datos/raw/limite_inei_ana/2026-10-31/limite_150133_sjm.geojson",
+      "url": "https://geosnirh.ana.gob.pe/server/rest/services/Hosted/distritos/FeatureServer/0/query?where=ubigeo%3D%27150133%27&outFields=*&outSR=4326&f=geojson",
+      "fecha_descarga": "2026-10-31",
+      "sha256": "2207c664029fbd192598406894f87db39fba216746e50c703e1c3b0cb7e52347",
+      "bytes": 30264,
+      "error": null
+    },
+    {
+      "id_fuente": "poblacion_inei_2026",
+      "archivo": "poblacion_proyectada_distrital_2018_2026.xlsx",
+      "ruta": "02_documentacion/01_recoleccion/datos/raw/poblacion_inei_2026/2026-10-31/poblacion_proyectada_distrital_2018_2026.xlsx",
+      "url": "https://cdn.www.gob.pe/uploads/document/file/8261096/6894980-peru-poblacion-total-proyectada-al-30-de-junio-de-cada-ano-segun-departamento-provincia-y-distrito-2018-2026.xlsx",
+      "fecha_descarga": "2026-10-31",
+      "sha256": "9436df29b883fd4a9db3705040a6668ff4efe7047c2643249b6b6bedd90d5c8b",
+      "bytes": 212580,
+      "error": null
+    },
+    {
+      "id_fuente": "sidpol_mininter",
+      "archivo": "DATASET_Denuncias_Policiales_Enero_2018_a_Septiembre_2026.csv",
+      "ruta": "02_documentacion/01_recoleccion/datos/raw/sidpol_mininter/2026-10-31/DATASET_Denuncias_Policiales_Enero_2018_a_Septiembre_2026.csv",
+      "url": "https://www.datosabiertos.gob.pe/sites/default/files/DATASET_Denuncias%20Policiales%20-%20Enero%202018%20a%20Septiembre%202026.csv",
+      "fecha_descarga": "2026-10-31",
+      "sha256": "e67a1edcd84483df5c471f0d6b9e13c2eeaa34c680af30eb1ec86c443d02ec76",
+      "bytes": 28003938,
+      "error": null
+    },
+    {
+      "id_fuente": "sidpol_mininter",
+      "archivo": "DICCIONARIO_DATOS_Denuncias_Policiales_Abr_2026.xlsx",
+      "ruta": "02_documentacion/01_recoleccion/datos/raw/sidpol_mininter/2026-10-31/DICCIONARIO_DATOS_Denuncias_Policiales_Abr_2026.xlsx",
+      "url": "https://www.datosabiertos.gob.pe/sites/default/files/DICCIONARIO_DATOS_Denuncias_Policiales_Abr%202026.xlsx",
+      "fecha_descarga": "2026-10-31",
+      "sha256": "6203beea2e4b2d58de2b9fc83d306e169f4236fc78deb0577ab7e3462d16eac5",
+      "bytes": 10097,
+      "error": null
+    },
+    {
+      "id_fuente": "sidpol_mininter",
+      "archivo": "METADATO_Denuncias_Policiales_Septiembre_2026.docx",
+      "ruta": "02_documentacion/01_recoleccion/datos/raw/sidpol_mininter/2026-10-31/METADATO_Denuncias_Policiales_Septiembre_2026.docx",
+      "url": "https://www.datosabiertos.gob.pe/sites/default/files/METADATO_Denuncias_Policiales_Septiembre%202026.docx",
+      "fecha_descarga": "2026-10-31",
+      "sha256": "c53af6d2abdbbb65018d7305c8170ae7f2d5e7e538f61396cde06c9ed65580ac",
+      "bytes": 18217,
+      "error": null
+    }
+  ]
+}

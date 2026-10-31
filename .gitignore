@@ -1,0 +1,20 @@
+# Entorno virtual (se recrea con python -m venv .venv + requirements)
+.venv/
+
+# Descargas crudas de la Fase 1: se regeneran con
+# 02_documentacion/01_recoleccion/scripts/01_descargar.py (URLs y sha256 en datos/manifest.json).
+# Incluye un CSV de 168 MB que supera el límite de GitHub.
+02_documentacion/01_recoleccion/datos/raw/
+
+# Python / Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.pytest_cache/
+.ruff_cache/
+
+# Configuración local de Claude Code
+.claude/settings.local.json
+
+# Archivos temporales de Office
+~$*

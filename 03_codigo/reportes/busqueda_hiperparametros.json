@@ -1,0 +1,253 @@
+{
+  "regresion_logistica": {
+    "mejores_parametros": {
+      "C": 10.0
+    },
+    "candidatos": [
+      {
+        "parametros": {
+          "C": 0.01
+        },
+        "macro_f1_valid": 0.468558
+      },
+      {
+        "parametros": {
+          "C": 0.1
+        },
+        "macro_f1_valid": 0.467557
+      },
+      {
+        "parametros": {
+          "C": 1.0
+        },
+        "macro_f1_valid": 0.473844
+      },
+      {
+        "parametros": {
+          "C": 10.0
+        },
+        "macro_f1_valid": 0.474777
+      }
+    ],
+    "mejor_macro_f1_valid": 0.4748,
+    "calibracion": {
+      "temperatura": 1.6453842016566873,
+      "sesgo": [
+        0.0,
+        -1.472573412502387,
+        -1.9430385990091548
+      ],
+      "desplazamiento": [
+        0.0,
+        1.4,
+        1.6
+      ]
+    }
+  },
+  "random_forest": {
+    "mejores_parametros": {
+      "n_estimators": 300,
+      "max_depth": 8,
+      "min_samples_leaf": 5
+    },
+    "candidatos": [
+      {
+        "parametros": {
+          "n_estimators": 300,
+          "max_depth": 4,
+          "min_samples_leaf": 1
+        },
+        "macro_f1_valid": 0.414237
+      },
+      {
+        "parametros": {
+          "n_estimators": 300,
+          "max_depth": 4,
+          "min_samples_leaf": 5
+        },
+        "macro_f1_valid": 0.416864
+      },
+      {
+        "parametros": {
+          "n_estimators": 300,
+          "max_depth": 4,
+          "min_samples_leaf": 20
+        },
+        "macro_f1_valid": 0.414759
+      },
+      {
+        "parametros": {
+          "n_estimators": 300,
+          "max_depth": 6,
+          "min_samples_leaf": 1
+        },
+        "macro_f1_valid": 0.448318
+      },
+      {
+        "parametros": {
+          "n_estimators": 300,
+          "max_depth": 6,
+          "min_samples_leaf": 5
+        },
+        "macro_f1_valid": 0.444078
+      },
+      {
+        "parametros": {
+          "n_estimators": 300,
+          "max_depth": 6,
+          "min_samples_leaf": 20
+        },
+        "macro_f1_valid": 0.426422
+      },
+      {
+        "parametros": {
+          "n_estimators": 300,
+          "max_depth": 8,
+          "min_samples_leaf": 1
+        },
+        "macro_f1_valid": 0.450568
+      },
+      {
+        "parametros": {
+          "n_estimators": 300,
+          "max_depth": 8,
+          "min_samples_leaf": 5
+        },
+        "macro_f1_valid": 0.457005
+      },
+      {
+        "parametros": {
+          "n_estimators": 300,
+          "max_depth": 8,
+          "min_samples_leaf": 20
+        },
+        "macro_f1_valid": 0.427221
+      },
+      {
+        "parametros": {
+          "n_estimators": 300,
+          "max_depth": null,
+          "min_samples_leaf": 1
+        },
+        "macro_f1_valid": 0.405503
+      },
+      {
+        "parametros": {
+          "n_estimators": 300,
+          "max_depth": null,
+          "min_samples_leaf": 5
+        },
+        "macro_f1_valid": 0.450697
+      },
+      {
+        "parametros": {
+          "n_estimators": 300,
+          "max_depth": null,
+          "min_samples_leaf": 20
+        },
+        "macro_f1_valid": 0.43172
+      }
+    ],
+    "mejor_macro_f1_valid": 0.457,
+    "calibracion": {
+      "temperatura": 1.019617274814547,
+      "sesgo": [
+        0.0,
+        -1.4356599309921114,
+        -1.8702361463117978
+      ],
+      "desplazamiento": [
+        0.0,
+        1.1,
+        1.1
+      ]
+    }
+  },
+  "gradient_boosting": {
+    "mejores_parametros": {
+      "n_estimators": 100,
+      "learning_rate": 0.05,
+      "max_depth": 3
+    },
+    "candidatos": [
+      {
+        "parametros": {
+          "n_estimators": 100,
+          "learning_rate": 0.05,
+          "max_depth": 2
+        },
+        "macro_f1_valid": 0.44755
+      },
+      {
+        "parametros": {
+          "n_estimators": 100,
+          "learning_rate": 0.05,
+          "max_depth": 3
+        },
+        "macro_f1_valid": 0.463076
+      },
+      {
+        "parametros": {
+          "n_estimators": 100,
+          "learning_rate": 0.1,
+          "max_depth": 2
+        },
+        "macro_f1_valid": 0.447657
+      },
+      {
+        "parametros": {
+          "n_estimators": 100,
+          "learning_rate": 0.1,
+          "max_depth": 3
+        },
+        "macro_f1_valid": 0.456293
+      },
+      {
+        "parametros": {
+          "n_estimators": 200,
+          "learning_rate": 0.05,
+          "max_depth": 2
+        },
+        "macro_f1_valid": 0.450505
+      },
+      {
+        "parametros": {
+          "n_estimators": 200,
+          "learning_rate": 0.05,
+          "max_depth": 3
+        },
+        "macro_f1_valid": 0.454259
+      },
+      {
+        "parametros": {
+          "n_estimators": 200,
+          "learning_rate": 0.1,
+          "max_depth": 2
+        },
+        "macro_f1_valid": 0.455968
+      },
+      {
+        "parametros": {
+          "n_estimators": 200,
+          "learning_rate": 0.1,
+          "max_depth": 3
+        },
+        "macro_f1_valid": 0.447871
+      }
+    ],
+    "mejor_macro_f1_valid": 0.4631,
+    "calibracion": {
+      "temperatura": 1.3431757847799617,
+      "sesgo": [
+        0.0,
+        -1.3615383707859479,
+        -1.860247608148413
+      ],
+      "desplazamiento": [
+        0.0,
+        1.0,
+        1.0
+      ]
+    }
+  }
+}

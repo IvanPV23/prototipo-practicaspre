@@ -1,0 +1,38 @@
+{
+  "extractos": [
+    {
+      "archivo": "02_documentacion/01_recoleccion/datos/raw/cco_mdsjm_2026/2026-10-31/incidencias_seguridad_sjm_20260610.csv",
+      "filas": 2592,
+      "fecha_corte": [
+        "20260610"
+      ],
+      "fecha_registro_min": "20260516",
+      "fecha_registro_max": "20260610",
+      "ids_unicos": 2592
+    }
+  ],
+  "filas_concatenadas": 2592,
+  "ids_presentes_en_mas_de_un_extracto": 0,
+  "filas_tras_deduplicar": 2592,
+  "ids_patron_hex8": 2592,
+  "comparacion_alcance_xlsx": {
+    "archivo": "01_alcance/incidencias_seguridad_sjm_20260610.xlsx",
+    "hojas": [
+      "incidencias_seguridad_sjm_20260",
+      "Calc_Dashboard",
+      "Dashboard"
+    ],
+    "filas_hoja_datos": 2592,
+    "ids_unicos_xlsx": 2591,
+    "celdas_id_guardadas_como_numero_en_xlsx": 67,
+    "ids_xlsx_que_no_son_hex8_al_leer_como_texto": 20,
+    "ids_del_csv_no_encontrados_en_xlsx": 21,
+    "explicacion": "Excel convirtió en número los ID hexadecimales formados solo por dígitos o con forma de notación científica (p. ej. '01127344' -> 1127344, '45184e36' -> 4.5184e40, '0e…' -> 0). Dos ID distintos del tipo '0e<dígitos>' quedaron ambos como 0: es el duplicado aparente. El CSV original del PNDA conserva los ID como texto y no tiene duplicados.",
+    "distribucion_igual_FECHA_REGISTRO": true,
+    "distribucion_igual_TURNO": true,
+    "distribucion_igual_TIPO": true,
+    "distribucion_igual_ZONA": true,
+    "distribucion_igual_SECTOR": true,
+    "distribucion_igual_ESTADO_FINAL": true
+  }
+}

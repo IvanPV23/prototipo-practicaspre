@@ -1,0 +1,37 @@
+# Fase 2 · Análisis y preparación para el modelado (Python 3.10.9, RAIZ/.venv)
+# Instalar:  .venv/Scripts/python.exe -m pip install -r 02_documentacion/02_analisis/requirements-analisis.txt
+# Kernel:    .venv/Scripts/python.exe -m ipykernel install --sys-prefix --name practicaspre-venv --display-name "Python (practicaspre .venv)"
+# Ejecutar (en orden, desde 02_documentacion/02_analisis/notebooks):
+#   ../../../.venv/Scripts/jupyter.exe nbconvert --to notebook --execute --inplace --ExecutePreprocessor.kernel_name=practicaspre-venv 01_calidad.ipynb
+#   (idem 02_temporal, 03_espacial, 04_preparacion_modelado)
+# HTML del informe: .venv/Scripts/python.exe 02_documentacion/02_analisis/scripts/exportar_informe_html.py
+
+# datos y cálculo
+numpy==2.2.6
+pandas==2.3.3
+scipy==1.15.3
+scikit-learn==1.7.2
+joblib==1.6.0
+threadpoolctl==3.7.0
+python-dateutil==3.0.0
+pytz==2026.6
+tzdata==2026.6
+
+# espacial
+shapely==2.1.2
+pyproj==3.7.1
+
+# figuras
+matplotlib==3.10.9
+pillow==12.3.0
+
+# notebooks
+jupyter==1.1.1
+ipykernel==7.3.0
+ipython==8.39.0
+nbformat==5.11.1
+nbclient==0.11.0
+nbconvert==7.17.2
+
+# exportación del informe a HTML
+Markdown==3.10.3

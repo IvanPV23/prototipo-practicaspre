@@ -1,0 +1,133 @@
+# Configuración del sistema de priorización preventiva.
+# Las rutas relativas se resuelven respecto de la carpeta 03_codigo (padre de config/).
+# Adaptar el sistema a otro distrito = cambiar este archivo y los datos de entrada, no el código.
+# Las fechas van entre comillas para que YAML no las convierta en objetos date.
+
+proyecto:
+  nombre: "Priorización preventiva"
+  distrito: "San Juan de Miraflores"
+  ubigeo_inei: "150133"
+  fuente_cita: "extracto de incidencias del CCO (Municipalidad Distrital de San Juan de Miraflores, 2026)"
+  version_sistema: "1.1.0"
+
+rutas:
+  canonico: "../02_documentacion/01_recoleccion/datos/procesados/incidencias_canonico.csv"
+  handoff_fase1: "../02_documentacion/01_recoleccion/handoff_fase1.json"
+  handoff_fase2: "../02_documentacion/02_analisis/handoff_fase2.json"
+  limite: "../02_documentacion/01_recoleccion/datos/cartografia/limite_distrito.geojson"
+  gravedad: "../02_documentacion/02_analisis/datos/gravedad_por_tipo.csv"
+  tabla_referencia_fase2: "../02_documentacion/02_analisis/datos/tabla_modelado.csv"
+  informe_fase1: "../02_documentacion/01_recoleccion/informe_recoleccion.md"
+  informe_fase2: "../02_documentacion/02_analisis/informe_analisis.md"
+  base_datos: "data/seguridad.db"
+  modelos: "modelos"
+  reportes: "reportes"
+  docs: "docs"
+
+datos:
+  fuente_id: "cco_mdsjm_2026"
+  # Si el CSV canónico cambia, el sha256 deja de coincidir con el handoff de la Fase 1 y la ingesta se detiene.
+  fecha_inicio_historia: "2026-05-16"
+  fin_arranque: "2026-05-21"          # 16–21 may: puesta en marcha -> solo historial para rezagos
+  fecha_corte_fuente: "2026-06-10"
+  fechas_censuradas: ["2026-06-09", "2026-06-10"]
+  tolerancia_borde_m: 150.0
+  feriados: ["2026-06-07"]           # Ley N.° 31788 (Día de la Bandera)
+
+microzona:
+  metodo: "grilla"
+  crs_metrico: "EPSG:32718"
+  tamano_m: 500.0
+  origen: [283500.0, 8651000.0]
+  prefijo_activa: "MZ-"
+  prefijo_inactiva: "SR-"           # celdas del distrito sin registros en entrenamiento
+
+particion:
+  train: ["2026-05-22", "2026-05-31"]
+  valid: ["2026-06-01", "2026-06-04"]
+  test: ["2026-06-05", "2026-06-08"]
+
+objetivo:
+  clases: ["Bajo", "Medio", "Alto"]
+  # b = mediana de los conteos > 0 de entrenamiento (se recalcula y se verifica contra el handoff: b = 1)
+  umbral_b_esperado: 1.0
+
+features:
+  lista:
+    - lag1_turno
+    - lag7_turno
+    - suma3_turno
+    - media7_turno
+    - lag1_celda
+    - suma7_celda
+    - dias_desde_ultima
+    - gravedad_media7_celda
+    - nivel_lag1_turno
+    - vecinos_lag1_turno
+    - vecinos_suma7
+    - dia_semana
+    - fin_de_semana
+    - feriado
+    - turno
+    - distrito_lag1_turno
+    - distrito_lag1
+    - distrito_media7
+  # feriado es constante (0) en train y valid: no aporta aprendizaje (ver ADR 0003).
+  excluidas_modelo: ["feriado"]
+  categoricas: ["turno", "dia_semana", "nivel_lag1_turno"]
+  tope_dias_desde_ultima: 14
+  # lag7_turno es nulo solo el 22 may (258 filas): se imputa con media7_turno de la misma fila (sin fuga).
+  imputacion_lag7_con: "media7_turno"
+  grupos:
+    historial: [lag1_turno, lag7_turno, suma3_turno, media7_turno, lag1_celda, suma7_celda, dias_desde_ultima,
+                gravedad_media7_celda, nivel_lag1_turno]
+    espacial: [vecinos_lag1_turno, vecinos_suma7]
+    calendario: [dia_semana, fin_de_semana, feriado, turno]
+    contexto: [distrito_lag1_turno, distrito_lag1, distrito_media7]
+  prohibidas: ["estado_final", "fecha_hora_cierre", "tiempo_respuesta_min", "NIVEL", "conteo", "nivel"]
+
+modelado:
+  semilla: 42
+  # Búsqueda pequeña: se ajusta con train y se elige con Macro F1 en valid. Test se evalúa una sola vez al final.
+  grillas:
+    regresion_logistica:
+      C: [0.01, 0.1, 1.0, 10.0]
+    random_forest:
+      n_estimators: [300]
+      max_depth: [4, 6, 8, null]
+      min_samples_leaf: [1, 5, 20]
+    gradient_boosting:
+      n_estimators: [100, 200]
+      learning_rate: [0.05, 0.1]
+      max_depth: [2, 3]
+  repeticiones_permutacion: 20
+  repeticiones_bootstrap: 2000
+  nivel_confianza: 0.95
+
+calibracion:
+  # Ajuste posterior con validación (ADR 0007): temperatura + sesgo por clase y desplazamientos de decisión
+  # para Medio y Alto. Corrige la sobrestimación de Alto que produce class_weight="balanced".
+  activa: true
+  desplazamiento_max: 3.0
+  desplazamiento_paso: 0.1
+
+prediccion:
+  # Fecha operativa = día siguiente al último día completo (8 jun), calculada solo con historia <= 8 jun.
+  # 9 y 10 jun están censurados en la fuente, por eso no se usan como historia ni se evalúan.
+  fechas_demostracion: "test"         # las fechas de prueba se publican como demostración
+
+priorizacion:
+  pesos: {w1: 0.5, w2: 0.3, w3: 0.2}
+  valor_nivel: {Bajo: 0.0, Medio: 0.5, Alto: 1.0}
+  gravedad_min: 1.0
+  gravedad_max: 5.0
+
+recursos:
+  tipos: ["Camioneta", "Motocicleta", "A pie", "Otro"]
+
+app:
+  top_por_defecto: 10
+  opciones_top: [5, 10, 20, 50]
+  dias_serie_detalle: 21
+  ultimas_incidencias: 20
+  dias_puntos_mapa: 7

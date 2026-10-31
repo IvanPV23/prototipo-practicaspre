@@ -1,0 +1,6 @@
+# Los datos se guardan byte a byte: el pipeline verifica el sha256 del CSV canónico contra el handoff de la Fase 1,
+# y una conversión de saltos de línea (core.autocrlf) lo rompería.
+*.csv     -text
+*.geojson -text
+*.json    -text
+*.ipynb   -text

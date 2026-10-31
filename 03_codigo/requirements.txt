@@ -1,0 +1,19 @@
+# Dependencias de ejecución (Python 3.10+, Windows 10, solo pip). Versiones fijadas.
+# Instalar:  python -m pip install -r requirements.txt -r requirements-dev.txt
+#            python -m pip install -e . --no-deps
+numpy==2.2.6
+pandas==2.3.3
+scipy==1.15.3
+scikit-learn==1.7.2
+joblib==1.6.0
+threadpoolctl==3.7.0
+PyYAML==6.0.3
+shapely==2.1.2
+pyproj==3.7.1
+matplotlib==3.10.9
+streamlit==1.65.0
+streamlit-folium==0.26.2
+folium==0.20.0
+branca==0.8.2
+plotly==7.1.0
+pyarrow==25.0.1
